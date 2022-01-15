@@ -56,12 +56,10 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                                       <Component id="enterMoneyIcon" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                       <Component id="enterMoneyLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="23" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -164,7 +162,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/coca-cola.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/coca-cola.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -299,7 +297,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/coca-cola-zero.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/coca-cola-zero.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -434,7 +432,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/sprite.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/sprite.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -569,7 +567,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/sprite-light.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/sprite-light.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -704,7 +702,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/fanta-strawberry.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/fanta-strawberry.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -839,7 +837,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/fanta-orange.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/fanta-orange.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -974,7 +972,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/pocari-sweat.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/pocari-sweat.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1109,7 +1107,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/cap-panda.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/cap-panda.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1244,7 +1242,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/green-sands.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/green-sands.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1379,7 +1377,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/nescafe-original.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/nescafe-original.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1514,7 +1512,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/nescafe-mocha.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/nescafe-mocha.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -1649,7 +1647,7 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/nescafe-latte.png"/>
+                      <Image iconType="3" name="/vendingmachine/images/nescafe-latte.png"/>
                     </Property>
                   </Properties>
                 </Component>
