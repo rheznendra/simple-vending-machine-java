@@ -7,12 +7,13 @@ package vendingmachine.models;
  */
 public class minumanModel {
 	private String kode, nama;
-	private int harga;
+	private int harga, stock;
 
-	public minumanModel(String kodeParam, String namaParam, int hargaParam) {
+	public minumanModel(String kodeParam, String namaParam, int hargaParam, int stockParam) {
 		kode = kodeParam;
 		nama = namaParam;
 		harga = hargaParam;
+		stock = stockParam;
 	}
 
 	public String getKode() {
@@ -25,5 +26,9 @@ public class minumanModel {
 
 	public int getHarga() {
 		return harga;
+	}
+
+	public int getStock() {
+		return stock;
 	}
 }

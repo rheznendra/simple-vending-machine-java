@@ -21,6 +21,7 @@ public class mainFrame extends javax.swing.JFrame {
 
 		initComponents();
 		getItemLabel.setVisible(false);
+		getStockBarang();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -214,11 +215,11 @@ public class mainFrame extends javax.swing.JFrame {
         panelCocaCola.add(panelHargaCocaCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 80, -1, 15));
 
         panelStockCocaCola.setBackground(new java.awt.Color(37, 42, 52));
-        panelStockCocaCola.setPreferredSize(new java.awt.Dimension(25, 15));
 
         stockCocaCola.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockCocaCola.setForeground(new java.awt.Color(234, 234, 234));
-        stockCocaCola.setText("10");
+        stockCocaCola.setText("0");
+        stockCocaCola.setName("coca-cola-zero"); // NOI18N
 
         javax.swing.GroupLayout panelStockCocaColaLayout = new javax.swing.GroupLayout(panelStockCocaCola);
         panelStockCocaCola.setLayout(panelStockCocaColaLayout);
@@ -298,7 +299,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockCocaColaZero.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockCocaColaZero.setForeground(new java.awt.Color(234, 234, 234));
-        stockCocaColaZero.setText("10");
+        stockCocaColaZero.setText("0");
+        stockCocaColaZero.setName("coca-cola-zero"); // NOI18N
 
         javax.swing.GroupLayout panelStockCocaColaZeroLayout = new javax.swing.GroupLayout(panelStockCocaColaZero);
         panelStockCocaColaZero.setLayout(panelStockCocaColaZeroLayout);
@@ -378,7 +380,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockSprite.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockSprite.setForeground(new java.awt.Color(234, 234, 234));
-        stockSprite.setText("10");
+        stockSprite.setText("0");
+        stockSprite.setName("sprite"); // NOI18N
 
         javax.swing.GroupLayout panelStockSpriteLayout = new javax.swing.GroupLayout(panelStockSprite);
         panelStockSprite.setLayout(panelStockSpriteLayout);
@@ -458,7 +461,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockSpriteLight.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockSpriteLight.setForeground(new java.awt.Color(234, 234, 234));
-        stockSpriteLight.setText("10");
+        stockSpriteLight.setText("0");
+        stockSpriteLight.setName("sprite-light"); // NOI18N
 
         javax.swing.GroupLayout panelStockSpriteLightLayout = new javax.swing.GroupLayout(panelStockSpriteLight);
         panelStockSpriteLight.setLayout(panelStockSpriteLightLayout);
@@ -538,7 +542,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockFantaStrawberry.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockFantaStrawberry.setForeground(new java.awt.Color(234, 234, 234));
-        stockFantaStrawberry.setText("10");
+        stockFantaStrawberry.setText("0");
+        stockFantaStrawberry.setName("fanta-strawberry"); // NOI18N
 
         javax.swing.GroupLayout panelStockFantaStrawberryLayout = new javax.swing.GroupLayout(panelStockFantaStrawberry);
         panelStockFantaStrawberry.setLayout(panelStockFantaStrawberryLayout);
@@ -618,7 +623,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockFantaOrange.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockFantaOrange.setForeground(new java.awt.Color(234, 234, 234));
-        stockFantaOrange.setText("10");
+        stockFantaOrange.setText("0");
+        stockFantaOrange.setName("fanta-orange"); // NOI18N
 
         javax.swing.GroupLayout panelStockFantaOrangeLayout = new javax.swing.GroupLayout(panelStockFantaOrange);
         panelStockFantaOrange.setLayout(panelStockFantaOrangeLayout);
@@ -698,7 +704,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockPocariSweat.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockPocariSweat.setForeground(new java.awt.Color(234, 234, 234));
-        stockPocariSweat.setText("10");
+        stockPocariSweat.setText("0");
+        stockPocariSweat.setName("pocari-sweat"); // NOI18N
 
         javax.swing.GroupLayout panelStockPocariSweatLayout = new javax.swing.GroupLayout(panelStockPocariSweat);
         panelStockPocariSweat.setLayout(panelStockPocariSweatLayout);
@@ -778,7 +785,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockCapPanda.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockCapPanda.setForeground(new java.awt.Color(234, 234, 234));
-        stockCapPanda.setText("10");
+        stockCapPanda.setText("0");
+        stockCapPanda.setName("cap-panda"); // NOI18N
 
         javax.swing.GroupLayout panelStockCapPandaLayout = new javax.swing.GroupLayout(panelStockCapPanda);
         panelStockCapPanda.setLayout(panelStockCapPandaLayout);
@@ -858,7 +866,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockGreenSands.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockGreenSands.setForeground(new java.awt.Color(234, 234, 234));
-        stockGreenSands.setText("10");
+        stockGreenSands.setText("0");
+        stockGreenSands.setName("green-sands"); // NOI18N
 
         javax.swing.GroupLayout panelStockGreenSandsLayout = new javax.swing.GroupLayout(panelStockGreenSands);
         panelStockGreenSands.setLayout(panelStockGreenSandsLayout);
@@ -938,7 +947,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockNescafeOriginal.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockNescafeOriginal.setForeground(new java.awt.Color(234, 234, 234));
-        stockNescafeOriginal.setText("10");
+        stockNescafeOriginal.setText("0");
+        stockNescafeOriginal.setName("nescafe-original"); // NOI18N
 
         javax.swing.GroupLayout panelStockNescafeOriginalLayout = new javax.swing.GroupLayout(panelStockNescafeOriginal);
         panelStockNescafeOriginal.setLayout(panelStockNescafeOriginalLayout);
@@ -1018,7 +1028,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockNescafeLatte.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockNescafeLatte.setForeground(new java.awt.Color(234, 234, 234));
-        stockNescafeLatte.setText("10");
+        stockNescafeLatte.setText("0");
+        stockNescafeLatte.setName("nescafe-latte"); // NOI18N
 
         javax.swing.GroupLayout panelStockNescafeLatteLayout = new javax.swing.GroupLayout(panelStockNescafeLatte);
         panelStockNescafeLatte.setLayout(panelStockNescafeLatteLayout);
@@ -1098,7 +1109,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         stockNescafeMocha.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockNescafeMocha.setForeground(new java.awt.Color(234, 234, 234));
-        stockNescafeMocha.setText("10");
+        stockNescafeMocha.setText("0");
+        stockNescafeMocha.setName("nescafe-mocha"); // NOI18N
 
         javax.swing.GroupLayout panelStockNescafeMochaLayout = new javax.swing.GroupLayout(panelStockNescafeMocha);
         panelStockNescafeMocha.setLayout(panelStockNescafeMochaLayout);
@@ -1432,6 +1444,7 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
 		controller.selectItem(currentSaldo, itemLabel, labelOutput, getItemLabel);
+		getStockBarang();
     }//GEN-LAST:event_btEnterActionPerformed
 
     private void btDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeleteActionPerformed
@@ -1453,6 +1466,10 @@ public class mainFrame extends javax.swing.JFrame {
     private void panelOutputMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelOutputMouseClicked
         controller.getOutputItem(getItemLabel, labelOutput);
     }//GEN-LAST:event_panelOutputMouseClicked
+
+	private void getStockBarang() {
+		controller.setStockBarang(stockCocaCola, stockCocaColaZero, stockSprite, stockSpriteLight, stockFantaStrawberry, stockFantaOrange, stockPocariSweat, stockCapPanda, stockGreenSands, stockNescafeOriginal, stockNescafeLatte, stockNescafeMocha);
+	}
 
 	public static void main(String args[]) {
 		/* Set the Nimbus look and feel */
