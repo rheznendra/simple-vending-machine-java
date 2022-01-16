@@ -28,81 +28,106 @@ public class mainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
+        panelBackgroundMinuman = new javax.swing.JPanel();
         panelCocaCola = new javax.swing.JPanel();
         cocaColaImg = new javax.swing.JLabel();
-        panelKode1 = new javax.swing.JPanel();
-        kodeA1 = new javax.swing.JLabel();
-        panelHarga = new javax.swing.JPanel();
-        hargaA1 = new javax.swing.JLabel();
+        panelKodeCocaCola = new javax.swing.JPanel();
+        kodeCocaCola = new javax.swing.JLabel();
+        panelHargaCocaCola = new javax.swing.JPanel();
+        hargaCocaCola = new javax.swing.JLabel();
+        panelStockCocaCola = new javax.swing.JPanel();
+        stockCocaCola = new javax.swing.JLabel();
         panelCocaColaZero = new javax.swing.JPanel();
-        cocaColaImg1 = new javax.swing.JLabel();
-        panelKode4 = new javax.swing.JPanel();
-        kodeA4 = new javax.swing.JLabel();
-        panelHarga3 = new javax.swing.JPanel();
-        hargaA4 = new javax.swing.JLabel();
+        cocaColaZeroImg = new javax.swing.JLabel();
+        panelKodeCocaColaZero = new javax.swing.JPanel();
+        kodeCocaColaZero = new javax.swing.JLabel();
+        panelHargaCocaColaZero = new javax.swing.JPanel();
+        hargaCocaColaZero = new javax.swing.JLabel();
+        panelStockCocaColaZero = new javax.swing.JPanel();
+        stockCocaColaZero = new javax.swing.JLabel();
         panelSprite = new javax.swing.JPanel();
-        cocaColaImg2 = new javax.swing.JLabel();
-        panelKode3 = new javax.swing.JPanel();
-        kodeA3 = new javax.swing.JLabel();
-        panelHarga2 = new javax.swing.JPanel();
-        hargaA3 = new javax.swing.JLabel();
+        spriteImg = new javax.swing.JLabel();
+        panelKodeSprite = new javax.swing.JPanel();
+        kodeSprite = new javax.swing.JLabel();
+        panelHargaSprite = new javax.swing.JPanel();
+        hargaSprite = new javax.swing.JLabel();
+        panelStockSprite = new javax.swing.JPanel();
+        stockSprite = new javax.swing.JLabel();
         panelSpriteLight = new javax.swing.JPanel();
         spriteLightImg = new javax.swing.JLabel();
-        panelKode5 = new javax.swing.JPanel();
-        kodeA5 = new javax.swing.JLabel();
-        panelHarga4 = new javax.swing.JPanel();
-        hargaA5 = new javax.swing.JLabel();
+        panelKodeSpriteLight = new javax.swing.JPanel();
+        kodeSpriteLight = new javax.swing.JLabel();
+        panelHargaSpriteLight = new javax.swing.JPanel();
+        hargaSpriteLight = new javax.swing.JLabel();
+        panelStockSpriteLight = new javax.swing.JPanel();
+        stockSpriteLight = new javax.swing.JLabel();
         panelFantaStrawberry = new javax.swing.JPanel();
-        cocaColaImg3 = new javax.swing.JLabel();
-        panelKode6 = new javax.swing.JPanel();
-        kodeA6 = new javax.swing.JLabel();
-        panelHarga5 = new javax.swing.JPanel();
-        hargaA6 = new javax.swing.JLabel();
+        fantaStrawberryImg = new javax.swing.JLabel();
+        panelKodeFantaStrawberry = new javax.swing.JPanel();
+        kodeFantaStrawberry = new javax.swing.JLabel();
+        panelHargaFantaStrawberry = new javax.swing.JPanel();
+        hargaFantaStrawberry = new javax.swing.JLabel();
+        panelStockFantaStrawberry = new javax.swing.JPanel();
+        stockFantaStrawberry = new javax.swing.JLabel();
         panelFantaOrange = new javax.swing.JPanel();
-        cocaColaImg4 = new javax.swing.JLabel();
-        panelKode7 = new javax.swing.JPanel();
-        kodeA7 = new javax.swing.JLabel();
-        panelHarga6 = new javax.swing.JPanel();
-        hargaA7 = new javax.swing.JLabel();
+        fantaOrangeImg = new javax.swing.JLabel();
+        panelKodeFantaOrange = new javax.swing.JPanel();
+        kodeFantaOrange = new javax.swing.JLabel();
+        panelHargaFantaOrange = new javax.swing.JPanel();
+        hargaFantaOrange = new javax.swing.JLabel();
+        panelStockFantaOrange = new javax.swing.JPanel();
+        stockFantaOrange = new javax.swing.JLabel();
         panelPocariSweat = new javax.swing.JPanel();
-        cocaColaImg5 = new javax.swing.JLabel();
-        panelKode8 = new javax.swing.JPanel();
-        kodeA8 = new javax.swing.JLabel();
-        panelHarga7 = new javax.swing.JPanel();
-        hargaA8 = new javax.swing.JLabel();
+        PocariSweatImg = new javax.swing.JLabel();
+        panelKodePocariSweat = new javax.swing.JPanel();
+        kodePocariSweat = new javax.swing.JLabel();
+        panelHargaPocariSweat = new javax.swing.JPanel();
+        hargaPocariSweat = new javax.swing.JLabel();
+        panelStockPocariSweat = new javax.swing.JPanel();
+        stockPocariSweat = new javax.swing.JLabel();
         panelCapPanda = new javax.swing.JPanel();
         capPandaImg = new javax.swing.JLabel();
-        panelKode9 = new javax.swing.JPanel();
-        kodeA9 = new javax.swing.JLabel();
-        panelHarga8 = new javax.swing.JPanel();
-        hargaA9 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        cocaColaImg7 = new javax.swing.JLabel();
-        panelKode10 = new javax.swing.JPanel();
-        kodeA10 = new javax.swing.JLabel();
-        panelHarga9 = new javax.swing.JPanel();
-        hargaA10 = new javax.swing.JLabel();
+        panelKodeCapPanda = new javax.swing.JPanel();
+        kodeCapPanda = new javax.swing.JLabel();
+        panelHargaCapPanda = new javax.swing.JPanel();
+        hargaCapPanda = new javax.swing.JLabel();
+        panelStockCapPanda = new javax.swing.JPanel();
+        stockCapPanda = new javax.swing.JLabel();
+        panelGreenSands = new javax.swing.JPanel();
+        greenSandsImg = new javax.swing.JLabel();
+        panelKodeGreenSands = new javax.swing.JPanel();
+        kodeGreenSands = new javax.swing.JLabel();
+        panelHargaGreenSands = new javax.swing.JPanel();
+        hargaGreenSands = new javax.swing.JLabel();
+        panelStockGreenSands = new javax.swing.JPanel();
+        stockGreenSands = new javax.swing.JLabel();
         panelNescafeOriginal = new javax.swing.JPanel();
-        cocaColaImg9 = new javax.swing.JLabel();
-        panelKode11 = new javax.swing.JPanel();
-        kodeA11 = new javax.swing.JLabel();
-        panelHarga10 = new javax.swing.JPanel();
-        hargaA11 = new javax.swing.JLabel();
-        panelNescafeMocha = new javax.swing.JPanel();
-        cocaColaImg8 = new javax.swing.JLabel();
-        panelKode13 = new javax.swing.JPanel();
-        kodeA13 = new javax.swing.JLabel();
-        panelHarga12 = new javax.swing.JPanel();
-        hargaA13 = new javax.swing.JLabel();
+        nescafeOriginalImg = new javax.swing.JLabel();
+        panelKodeNescafeOriginal = new javax.swing.JPanel();
+        kodeNescafeOriginal = new javax.swing.JLabel();
+        panelHargaNescafeOriginal = new javax.swing.JPanel();
+        hargaNescafeOriginal = new javax.swing.JLabel();
+        panelStockNescafeOriginal = new javax.swing.JPanel();
+        stockNescafeOriginal = new javax.swing.JLabel();
         panelNescafeLatte = new javax.swing.JPanel();
-        cocaColaImg6 = new javax.swing.JLabel();
-        panelKode12 = new javax.swing.JPanel();
-        kodeA12 = new javax.swing.JLabel();
-        panelHarga11 = new javax.swing.JPanel();
-        hargaA12 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        nescafeLatteImg = new javax.swing.JLabel();
+        panelKodeNescafeLatte = new javax.swing.JPanel();
+        kodeNescafeLatte = new javax.swing.JLabel();
+        panelHargaNescafeLatte = new javax.swing.JPanel();
+        hargaNescafeLatte = new javax.swing.JLabel();
+        panelStockNescafeLatte = new javax.swing.JPanel();
+        stockNescafeLatte = new javax.swing.JLabel();
+        panelNescafeMocha = new javax.swing.JPanel();
+        nescafeMochaImg = new javax.swing.JLabel();
+        panelKodeNescafeMocha = new javax.swing.JPanel();
+        kodeNescafeMocha = new javax.swing.JLabel();
+        panelHargaNescafeMocha = new javax.swing.JPanel();
+        hargaNescafeMocha = new javax.swing.JLabel();
+        panelStockNescafeMocha = new javax.swing.JPanel();
+        stockNescafeMocha = new javax.swing.JLabel();
+        panelOutput = new javax.swing.JPanel();
+        panelgetItem = new javax.swing.JPanel();
+        labelOutput = new javax.swing.JLabel();
         getItemLabel = new javax.swing.JLabel();
         panelEnterMoney = new javax.swing.JPanel();
         btEnterMoney = new javax.swing.JPanel();
@@ -131,955 +156,1006 @@ public class mainFrame extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(48, 56, 65));
 
-        jPanel17.setBackground(new java.awt.Color(60, 255, 138));
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelBackgroundMinuman.setBackground(new java.awt.Color(60, 255, 138));
+        panelBackgroundMinuman.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelCocaCola.setBackground(new java.awt.Color(234, 234, 234));
+        panelCocaCola.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cocaColaImg.setForeground(new java.awt.Color(255, 255, 255));
         cocaColaImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cocaColaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/coca-cola.png"))); // NOI18N
+        panelCocaCola.add(cocaColaImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, -1, 68));
 
-        panelKode1.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeCocaCola.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA1.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA1.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA1.setText("A1");
+        kodeCocaCola.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeCocaCola.setForeground(new java.awt.Color(234, 234, 234));
+        kodeCocaCola.setText("A1");
 
-        javax.swing.GroupLayout panelKode1Layout = new javax.swing.GroupLayout(panelKode1);
-        panelKode1.setLayout(panelKode1Layout);
-        panelKode1Layout.setHorizontalGroup(
-            panelKode1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeCocaColaLayout = new javax.swing.GroupLayout(panelKodeCocaCola);
+        panelKodeCocaCola.setLayout(panelKodeCocaColaLayout);
+        panelKodeCocaColaLayout.setHorizontalGroup(
+            panelKodeCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeCocaColaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA1)
+                .addComponent(kodeCocaCola)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode1Layout.setVerticalGroup(
-            panelKode1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode1Layout.createSequentialGroup()
-                .addComponent(kodeA1)
+        panelKodeCocaColaLayout.setVerticalGroup(
+            panelKodeCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeCocaColaLayout.createSequentialGroup()
+                .addComponent(kodeCocaCola)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga.setBackground(new java.awt.Color(37, 42, 52));
+        panelCocaCola.add(panelKodeCocaCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA1.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA1.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA1.setText("Rp. 6.000");
+        panelHargaCocaCola.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHargaLayout = new javax.swing.GroupLayout(panelHarga);
-        panelHarga.setLayout(panelHargaLayout);
-        panelHargaLayout.setHorizontalGroup(
-            panelHargaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaLayout.createSequentialGroup()
+        hargaCocaCola.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaCocaCola.setForeground(new java.awt.Color(255, 255, 255));
+        hargaCocaCola.setText("Rp. 6.000");
+
+        javax.swing.GroupLayout panelHargaCocaColaLayout = new javax.swing.GroupLayout(panelHargaCocaCola);
+        panelHargaCocaCola.setLayout(panelHargaCocaColaLayout);
+        panelHargaCocaColaLayout.setHorizontalGroup(
+            panelHargaCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaCocaColaLayout.createSequentialGroup()
                 .addContainerGap(8, Short.MAX_VALUE)
-                .addComponent(hargaA1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaCocaCola, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHargaLayout.setVerticalGroup(
-            panelHargaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaCocaColaLayout.setVerticalGroup(
+            panelHargaCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaCocaCola, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelCocaColaLayout = new javax.swing.GroupLayout(panelCocaCola);
-        panelCocaCola.setLayout(panelCocaColaLayout);
-        panelCocaColaLayout.setHorizontalGroup(
-            panelCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCocaColaLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(panelCocaColaLayout.createSequentialGroup()
+        panelCocaCola.add(panelHargaCocaCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 80, -1, 15));
+
+        panelStockCocaCola.setBackground(new java.awt.Color(37, 42, 52));
+        panelStockCocaCola.setPreferredSize(new java.awt.Dimension(25, 15));
+
+        stockCocaCola.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockCocaCola.setForeground(new java.awt.Color(234, 234, 234));
+        stockCocaCola.setText("10");
+
+        javax.swing.GroupLayout panelStockCocaColaLayout = new javax.swing.GroupLayout(panelStockCocaCola);
+        panelStockCocaCola.setLayout(panelStockCocaColaLayout);
+        panelStockCocaColaLayout.setHorizontalGroup(
+            panelStockCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockCocaColaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelKode1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
-        );
-        panelCocaColaLayout.setVerticalGroup(
-            panelCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCocaColaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(stockCocaCola)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        panelStockCocaColaLayout.setVerticalGroup(
+            panelStockCocaColaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockCocaColaLayout.createSequentialGroup()
+                .addComponent(stockCocaCola)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
-        jPanel17.add(panelCocaCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 100));
+        panelCocaCola.add(panelStockCocaCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelCocaCola, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 100));
 
         panelCocaColaZero.setBackground(new java.awt.Color(234, 234, 234));
+        panelCocaColaZero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg1.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/coca-cola-zero.png"))); // NOI18N
+        cocaColaZeroImg.setForeground(new java.awt.Color(255, 255, 255));
+        cocaColaZeroImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cocaColaZeroImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/coca-cola-zero.png"))); // NOI18N
+        panelCocaColaZero.add(cocaColaZeroImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode4.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeCocaColaZero.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA4.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA4.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA4.setText("B1");
+        kodeCocaColaZero.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeCocaColaZero.setForeground(new java.awt.Color(234, 234, 234));
+        kodeCocaColaZero.setText("B1");
 
-        javax.swing.GroupLayout panelKode4Layout = new javax.swing.GroupLayout(panelKode4);
-        panelKode4.setLayout(panelKode4Layout);
-        panelKode4Layout.setHorizontalGroup(
-            panelKode4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode4Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeCocaColaZeroLayout = new javax.swing.GroupLayout(panelKodeCocaColaZero);
+        panelKodeCocaColaZero.setLayout(panelKodeCocaColaZeroLayout);
+        panelKodeCocaColaZeroLayout.setHorizontalGroup(
+            panelKodeCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeCocaColaZeroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA4)
+                .addComponent(kodeCocaColaZero)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode4Layout.setVerticalGroup(
-            panelKode4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode4Layout.createSequentialGroup()
-                .addComponent(kodeA4)
+        panelKodeCocaColaZeroLayout.setVerticalGroup(
+            panelKodeCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeCocaColaZeroLayout.createSequentialGroup()
+                .addComponent(kodeCocaColaZero)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga3.setBackground(new java.awt.Color(37, 42, 52));
+        panelCocaColaZero.add(panelKodeCocaColaZero, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA4.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA4.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA4.setText("Rp. 6.000");
+        panelHargaCocaColaZero.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga3Layout = new javax.swing.GroupLayout(panelHarga3);
-        panelHarga3.setLayout(panelHarga3Layout);
-        panelHarga3Layout.setHorizontalGroup(
-            panelHarga3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga3Layout.createSequentialGroup()
+        hargaCocaColaZero.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaCocaColaZero.setForeground(new java.awt.Color(255, 255, 255));
+        hargaCocaColaZero.setText("Rp. 6.000");
+
+        javax.swing.GroupLayout panelHargaCocaColaZeroLayout = new javax.swing.GroupLayout(panelHargaCocaColaZero);
+        panelHargaCocaColaZero.setLayout(panelHargaCocaColaZeroLayout);
+        panelHargaCocaColaZeroLayout.setHorizontalGroup(
+            panelHargaCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaCocaColaZeroLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaCocaColaZero, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga3Layout.setVerticalGroup(
-            panelHarga3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaCocaColaZeroLayout.setVerticalGroup(
+            panelHargaCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaCocaColaZero, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelCocaColaZeroLayout = new javax.swing.GroupLayout(panelCocaColaZero);
-        panelCocaColaZero.setLayout(panelCocaColaZeroLayout);
-        panelCocaColaZeroLayout.setHorizontalGroup(
-            panelCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCocaColaZeroLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelCocaColaZero.add(panelHargaCocaColaZero, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 80, -1, 15));
+
+        panelStockCocaColaZero.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockCocaColaZero.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockCocaColaZero.setForeground(new java.awt.Color(234, 234, 234));
+        stockCocaColaZero.setText("10");
+
+        javax.swing.GroupLayout panelStockCocaColaZeroLayout = new javax.swing.GroupLayout(panelStockCocaColaZero);
+        panelStockCocaColaZero.setLayout(panelStockCocaColaZeroLayout);
+        panelStockCocaColaZeroLayout.setHorizontalGroup(
+            panelStockCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockCocaColaZeroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockCocaColaZero)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCocaColaZeroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
         );
-        panelCocaColaZeroLayout.setVerticalGroup(
-            panelCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCocaColaZeroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelStockCocaColaZeroLayout.setVerticalGroup(
+            panelStockCocaColaZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockCocaColaZeroLayout.createSequentialGroup()
+                .addComponent(stockCocaColaZero)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelCocaColaZero, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, -1));
+        panelCocaColaZero.add(panelStockCocaColaZero, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelCocaColaZero, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, 100));
 
         panelSprite.setBackground(new java.awt.Color(234, 234, 234));
+        panelSprite.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg2.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/sprite.png"))); // NOI18N
+        spriteImg.setForeground(new java.awt.Color(255, 255, 255));
+        spriteImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        spriteImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/sprite.png"))); // NOI18N
+        panelSprite.add(spriteImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode3.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeSprite.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA3.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA3.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA3.setText("C1");
+        kodeSprite.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeSprite.setForeground(new java.awt.Color(234, 234, 234));
+        kodeSprite.setText("C1");
 
-        javax.swing.GroupLayout panelKode3Layout = new javax.swing.GroupLayout(panelKode3);
-        panelKode3.setLayout(panelKode3Layout);
-        panelKode3Layout.setHorizontalGroup(
-            panelKode3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeSpriteLayout = new javax.swing.GroupLayout(panelKodeSprite);
+        panelKodeSprite.setLayout(panelKodeSpriteLayout);
+        panelKodeSpriteLayout.setHorizontalGroup(
+            panelKodeSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeSpriteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA3)
+                .addComponent(kodeSprite)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode3Layout.setVerticalGroup(
-            panelKode3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode3Layout.createSequentialGroup()
-                .addComponent(kodeA3)
+        panelKodeSpriteLayout.setVerticalGroup(
+            panelKodeSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeSpriteLayout.createSequentialGroup()
+                .addComponent(kodeSprite)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga2.setBackground(new java.awt.Color(37, 42, 52));
+        panelSprite.add(panelKodeSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA3.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA3.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA3.setText("Rp. 6.000");
+        panelHargaSprite.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga2Layout = new javax.swing.GroupLayout(panelHarga2);
-        panelHarga2.setLayout(panelHarga2Layout);
-        panelHarga2Layout.setHorizontalGroup(
-            panelHarga2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga2Layout.createSequentialGroup()
+        hargaSprite.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaSprite.setForeground(new java.awt.Color(255, 255, 255));
+        hargaSprite.setText("Rp. 6.000");
+
+        javax.swing.GroupLayout panelHargaSpriteLayout = new javax.swing.GroupLayout(panelHargaSprite);
+        panelHargaSprite.setLayout(panelHargaSpriteLayout);
+        panelHargaSpriteLayout.setHorizontalGroup(
+            panelHargaSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaSpriteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaSprite, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga2Layout.setVerticalGroup(
-            panelHarga2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaSpriteLayout.setVerticalGroup(
+            panelHargaSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaSprite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelSpriteLayout = new javax.swing.GroupLayout(panelSprite);
-        panelSprite.setLayout(panelSpriteLayout);
-        panelSpriteLayout.setHorizontalGroup(
-            panelSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSpriteLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelSprite.add(panelHargaSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 80, -1, 15));
+
+        panelStockSprite.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockSprite.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockSprite.setForeground(new java.awt.Color(234, 234, 234));
+        stockSprite.setText("10");
+
+        javax.swing.GroupLayout panelStockSpriteLayout = new javax.swing.GroupLayout(panelStockSprite);
+        panelStockSprite.setLayout(panelStockSpriteLayout);
+        panelStockSpriteLayout.setHorizontalGroup(
+            panelStockSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockSpriteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockSprite)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSpriteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
         );
-        panelSpriteLayout.setVerticalGroup(
-            panelSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSpriteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelStockSpriteLayout.setVerticalGroup(
+            panelStockSpriteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockSpriteLayout.createSequentialGroup()
+                .addComponent(stockSprite)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 100, 100));
+        panelSprite.add(panelStockSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelSprite, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 100, 100));
 
         panelSpriteLight.setBackground(new java.awt.Color(234, 234, 234));
+        panelSpriteLight.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         spriteLightImg.setForeground(new java.awt.Color(255, 255, 255));
         spriteLightImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         spriteLightImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/sprite-light.png"))); // NOI18N
+        panelSpriteLight.add(spriteLightImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, -1, 68));
 
-        panelKode5.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeSpriteLight.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA5.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA5.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA5.setText("A2");
+        kodeSpriteLight.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeSpriteLight.setForeground(new java.awt.Color(234, 234, 234));
+        kodeSpriteLight.setText("A2");
 
-        javax.swing.GroupLayout panelKode5Layout = new javax.swing.GroupLayout(panelKode5);
-        panelKode5.setLayout(panelKode5Layout);
-        panelKode5Layout.setHorizontalGroup(
-            panelKode5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode5Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeSpriteLightLayout = new javax.swing.GroupLayout(panelKodeSpriteLight);
+        panelKodeSpriteLight.setLayout(panelKodeSpriteLightLayout);
+        panelKodeSpriteLightLayout.setHorizontalGroup(
+            panelKodeSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeSpriteLightLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA5)
+                .addComponent(kodeSpriteLight)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode5Layout.setVerticalGroup(
-            panelKode5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode5Layout.createSequentialGroup()
-                .addComponent(kodeA5)
+        panelKodeSpriteLightLayout.setVerticalGroup(
+            panelKodeSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeSpriteLightLayout.createSequentialGroup()
+                .addComponent(kodeSpriteLight)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga4.setBackground(new java.awt.Color(37, 42, 52));
+        panelSpriteLight.add(panelKodeSpriteLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA5.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA5.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA5.setText("Rp. 6.000");
+        panelHargaSpriteLight.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga4Layout = new javax.swing.GroupLayout(panelHarga4);
-        panelHarga4.setLayout(panelHarga4Layout);
-        panelHarga4Layout.setHorizontalGroup(
-            panelHarga4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga4Layout.createSequentialGroup()
+        hargaSpriteLight.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaSpriteLight.setForeground(new java.awt.Color(255, 255, 255));
+        hargaSpriteLight.setText("Rp. 6.000");
+
+        javax.swing.GroupLayout panelHargaSpriteLightLayout = new javax.swing.GroupLayout(panelHargaSpriteLight);
+        panelHargaSpriteLight.setLayout(panelHargaSpriteLightLayout);
+        panelHargaSpriteLightLayout.setHorizontalGroup(
+            panelHargaSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaSpriteLightLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaSpriteLight, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga4Layout.setVerticalGroup(
-            panelHarga4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaSpriteLightLayout.setVerticalGroup(
+            panelHargaSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaSpriteLight, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelSpriteLightLayout = new javax.swing.GroupLayout(panelSpriteLight);
-        panelSpriteLight.setLayout(panelSpriteLightLayout);
-        panelSpriteLightLayout.setHorizontalGroup(
-            panelSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSpriteLightLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(spriteLightImg, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelSpriteLight.add(panelHargaSpriteLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 15));
+
+        panelStockSpriteLight.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockSpriteLight.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockSpriteLight.setForeground(new java.awt.Color(234, 234, 234));
+        stockSpriteLight.setText("10");
+
+        javax.swing.GroupLayout panelStockSpriteLightLayout = new javax.swing.GroupLayout(panelStockSpriteLight);
+        panelStockSpriteLight.setLayout(panelStockSpriteLightLayout);
+        panelStockSpriteLightLayout.setHorizontalGroup(
+            panelStockSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockSpriteLightLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockSpriteLight)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelSpriteLightLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
-        panelSpriteLightLayout.setVerticalGroup(
-            panelSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSpriteLightLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(spriteLightImg, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelStockSpriteLightLayout.setVerticalGroup(
+            panelStockSpriteLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockSpriteLightLayout.createSequentialGroup()
+                .addComponent(stockSpriteLight)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelSpriteLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 100));
+        panelSpriteLight.add(panelStockSpriteLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelSpriteLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 100));
 
         panelFantaStrawberry.setBackground(new java.awt.Color(234, 234, 234));
+        panelFantaStrawberry.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg3.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/fanta-strawberry.png"))); // NOI18N
+        fantaStrawberryImg.setForeground(new java.awt.Color(255, 255, 255));
+        fantaStrawberryImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fantaStrawberryImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/fanta-strawberry.png"))); // NOI18N
+        panelFantaStrawberry.add(fantaStrawberryImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode6.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeFantaStrawberry.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA6.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA6.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA6.setText("B2");
+        kodeFantaStrawberry.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeFantaStrawberry.setForeground(new java.awt.Color(234, 234, 234));
+        kodeFantaStrawberry.setText("B2");
 
-        javax.swing.GroupLayout panelKode6Layout = new javax.swing.GroupLayout(panelKode6);
-        panelKode6.setLayout(panelKode6Layout);
-        panelKode6Layout.setHorizontalGroup(
-            panelKode6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode6Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeFantaStrawberryLayout = new javax.swing.GroupLayout(panelKodeFantaStrawberry);
+        panelKodeFantaStrawberry.setLayout(panelKodeFantaStrawberryLayout);
+        panelKodeFantaStrawberryLayout.setHorizontalGroup(
+            panelKodeFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeFantaStrawberryLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA6)
+                .addComponent(kodeFantaStrawberry)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode6Layout.setVerticalGroup(
-            panelKode6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode6Layout.createSequentialGroup()
-                .addComponent(kodeA6)
+        panelKodeFantaStrawberryLayout.setVerticalGroup(
+            panelKodeFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeFantaStrawberryLayout.createSequentialGroup()
+                .addComponent(kodeFantaStrawberry)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga5.setBackground(new java.awt.Color(37, 42, 52));
+        panelFantaStrawberry.add(panelKodeFantaStrawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA6.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA6.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA6.setText("Rp. 6.000");
+        panelHargaFantaStrawberry.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga5Layout = new javax.swing.GroupLayout(panelHarga5);
-        panelHarga5.setLayout(panelHarga5Layout);
-        panelHarga5Layout.setHorizontalGroup(
-            panelHarga5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga5Layout.createSequentialGroup()
+        hargaFantaStrawberry.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaFantaStrawberry.setForeground(new java.awt.Color(255, 255, 255));
+        hargaFantaStrawberry.setText("Rp. 6.000");
+
+        javax.swing.GroupLayout panelHargaFantaStrawberryLayout = new javax.swing.GroupLayout(panelHargaFantaStrawberry);
+        panelHargaFantaStrawberry.setLayout(panelHargaFantaStrawberryLayout);
+        panelHargaFantaStrawberryLayout.setHorizontalGroup(
+            panelHargaFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaFantaStrawberryLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaFantaStrawberry, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga5Layout.setVerticalGroup(
-            panelHarga5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaFantaStrawberryLayout.setVerticalGroup(
+            panelHargaFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaFantaStrawberry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelFantaStrawberryLayout = new javax.swing.GroupLayout(panelFantaStrawberry);
-        panelFantaStrawberry.setLayout(panelFantaStrawberryLayout);
-        panelFantaStrawberryLayout.setHorizontalGroup(
-            panelFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFantaStrawberryLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelFantaStrawberry.add(panelHargaFantaStrawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 15));
+
+        panelStockFantaStrawberry.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockFantaStrawberry.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockFantaStrawberry.setForeground(new java.awt.Color(234, 234, 234));
+        stockFantaStrawberry.setText("10");
+
+        javax.swing.GroupLayout panelStockFantaStrawberryLayout = new javax.swing.GroupLayout(panelStockFantaStrawberry);
+        panelStockFantaStrawberry.setLayout(panelStockFantaStrawberryLayout);
+        panelStockFantaStrawberryLayout.setHorizontalGroup(
+            panelStockFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockFantaStrawberryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockFantaStrawberry)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelFantaStrawberryLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
-        panelFantaStrawberryLayout.setVerticalGroup(
-            panelFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFantaStrawberryLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelStockFantaStrawberryLayout.setVerticalGroup(
+            panelStockFantaStrawberryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockFantaStrawberryLayout.createSequentialGroup()
+                .addComponent(stockFantaStrawberry)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelFantaStrawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, 100));
+        panelFantaStrawberry.add(panelStockFantaStrawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelFantaStrawberry, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 100, 100));
 
         panelFantaOrange.setBackground(new java.awt.Color(234, 234, 234));
+        panelFantaOrange.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg4.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/fanta-orange.png"))); // NOI18N
+        fantaOrangeImg.setForeground(new java.awt.Color(255, 255, 255));
+        fantaOrangeImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fantaOrangeImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/fanta-orange.png"))); // NOI18N
+        panelFantaOrange.add(fantaOrangeImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode7.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeFantaOrange.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA7.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA7.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA7.setText("C2");
+        kodeFantaOrange.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeFantaOrange.setForeground(new java.awt.Color(234, 234, 234));
+        kodeFantaOrange.setText("C2");
 
-        javax.swing.GroupLayout panelKode7Layout = new javax.swing.GroupLayout(panelKode7);
-        panelKode7.setLayout(panelKode7Layout);
-        panelKode7Layout.setHorizontalGroup(
-            panelKode7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode7Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeFantaOrangeLayout = new javax.swing.GroupLayout(panelKodeFantaOrange);
+        panelKodeFantaOrange.setLayout(panelKodeFantaOrangeLayout);
+        panelKodeFantaOrangeLayout.setHorizontalGroup(
+            panelKodeFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeFantaOrangeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA7)
+                .addComponent(kodeFantaOrange)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode7Layout.setVerticalGroup(
-            panelKode7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode7Layout.createSequentialGroup()
-                .addComponent(kodeA7)
+        panelKodeFantaOrangeLayout.setVerticalGroup(
+            panelKodeFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeFantaOrangeLayout.createSequentialGroup()
+                .addComponent(kodeFantaOrange)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga6.setBackground(new java.awt.Color(37, 42, 52));
+        panelFantaOrange.add(panelKodeFantaOrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA7.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA7.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA7.setText("Rp. 6.000");
+        panelHargaFantaOrange.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga6Layout = new javax.swing.GroupLayout(panelHarga6);
-        panelHarga6.setLayout(panelHarga6Layout);
-        panelHarga6Layout.setHorizontalGroup(
-            panelHarga6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga6Layout.createSequentialGroup()
+        hargaFantaOrange.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaFantaOrange.setForeground(new java.awt.Color(255, 255, 255));
+        hargaFantaOrange.setText("Rp. 6.000");
+
+        javax.swing.GroupLayout panelHargaFantaOrangeLayout = new javax.swing.GroupLayout(panelHargaFantaOrange);
+        panelHargaFantaOrange.setLayout(panelHargaFantaOrangeLayout);
+        panelHargaFantaOrangeLayout.setHorizontalGroup(
+            panelHargaFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaFantaOrangeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaFantaOrange, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga6Layout.setVerticalGroup(
-            panelHarga6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaFantaOrangeLayout.setVerticalGroup(
+            panelHargaFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaFantaOrange, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelFantaOrangeLayout = new javax.swing.GroupLayout(panelFantaOrange);
-        panelFantaOrange.setLayout(panelFantaOrangeLayout);
-        panelFantaOrangeLayout.setHorizontalGroup(
-            panelFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFantaOrangeLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelFantaOrange.add(panelHargaFantaOrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 15));
+
+        panelStockFantaOrange.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockFantaOrange.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockFantaOrange.setForeground(new java.awt.Color(234, 234, 234));
+        stockFantaOrange.setText("10");
+
+        javax.swing.GroupLayout panelStockFantaOrangeLayout = new javax.swing.GroupLayout(panelStockFantaOrange);
+        panelStockFantaOrange.setLayout(panelStockFantaOrangeLayout);
+        panelStockFantaOrangeLayout.setHorizontalGroup(
+            panelStockFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockFantaOrangeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockFantaOrange)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelFantaOrangeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
-        panelFantaOrangeLayout.setVerticalGroup(
-            panelFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelFantaOrangeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelStockFantaOrangeLayout.setVerticalGroup(
+            panelStockFantaOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockFantaOrangeLayout.createSequentialGroup()
+                .addComponent(stockFantaOrange)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelFantaOrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, -1, -1));
+        panelFantaOrange.add(panelStockFantaOrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelFantaOrange, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 100, 100));
 
         panelPocariSweat.setBackground(new java.awt.Color(234, 234, 234));
+        panelPocariSweat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg5.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/pocari-sweat.png"))); // NOI18N
+        PocariSweatImg.setForeground(new java.awt.Color(255, 255, 255));
+        PocariSweatImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        PocariSweatImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/pocari-sweat.png"))); // NOI18N
+        panelPocariSweat.add(PocariSweatImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode8.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodePocariSweat.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA8.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA8.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA8.setText("A3");
+        kodePocariSweat.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodePocariSweat.setForeground(new java.awt.Color(234, 234, 234));
+        kodePocariSweat.setText("A3");
 
-        javax.swing.GroupLayout panelKode8Layout = new javax.swing.GroupLayout(panelKode8);
-        panelKode8.setLayout(panelKode8Layout);
-        panelKode8Layout.setHorizontalGroup(
-            panelKode8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode8Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodePocariSweatLayout = new javax.swing.GroupLayout(panelKodePocariSweat);
+        panelKodePocariSweat.setLayout(panelKodePocariSweatLayout);
+        panelKodePocariSweatLayout.setHorizontalGroup(
+            panelKodePocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodePocariSweatLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA8)
+                .addComponent(kodePocariSweat)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode8Layout.setVerticalGroup(
-            panelKode8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode8Layout.createSequentialGroup()
-                .addComponent(kodeA8)
+        panelKodePocariSweatLayout.setVerticalGroup(
+            panelKodePocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodePocariSweatLayout.createSequentialGroup()
+                .addComponent(kodePocariSweat)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga7.setBackground(new java.awt.Color(37, 42, 52));
+        panelPocariSweat.add(panelKodePocariSweat, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA8.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA8.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA8.setText("Rp. 7.000");
+        panelHargaPocariSweat.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga7Layout = new javax.swing.GroupLayout(panelHarga7);
-        panelHarga7.setLayout(panelHarga7Layout);
-        panelHarga7Layout.setHorizontalGroup(
-            panelHarga7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga7Layout.createSequentialGroup()
+        hargaPocariSweat.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaPocariSweat.setForeground(new java.awt.Color(255, 255, 255));
+        hargaPocariSweat.setText("Rp. 7.000");
+
+        javax.swing.GroupLayout panelHargaPocariSweatLayout = new javax.swing.GroupLayout(panelHargaPocariSweat);
+        panelHargaPocariSweat.setLayout(panelHargaPocariSweatLayout);
+        panelHargaPocariSweatLayout.setHorizontalGroup(
+            panelHargaPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaPocariSweatLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaPocariSweat, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga7Layout.setVerticalGroup(
-            panelHarga7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaPocariSweatLayout.setVerticalGroup(
+            panelHargaPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaPocariSweat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelPocariSweatLayout = new javax.swing.GroupLayout(panelPocariSweat);
-        panelPocariSweat.setLayout(panelPocariSweatLayout);
-        panelPocariSweatLayout.setHorizontalGroup(
-            panelPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPocariSweatLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelPocariSweat.add(panelHargaPocariSweat, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 15));
+
+        panelStockPocariSweat.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockPocariSweat.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockPocariSweat.setForeground(new java.awt.Color(234, 234, 234));
+        stockPocariSweat.setText("10");
+
+        javax.swing.GroupLayout panelStockPocariSweatLayout = new javax.swing.GroupLayout(panelStockPocariSweat);
+        panelStockPocariSweat.setLayout(panelStockPocariSweatLayout);
+        panelStockPocariSweatLayout.setHorizontalGroup(
+            panelStockPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockPocariSweatLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockPocariSweat)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelPocariSweatLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
-        panelPocariSweatLayout.setVerticalGroup(
-            panelPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPocariSweatLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelStockPocariSweatLayout.setVerticalGroup(
+            panelStockPocariSweatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockPocariSweatLayout.createSequentialGroup()
+                .addComponent(stockPocariSweat)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelPocariSweat, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 100, 100));
+        panelPocariSweat.add(panelStockPocariSweat, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelPocariSweat, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 100, 100));
 
         panelCapPanda.setBackground(new java.awt.Color(234, 234, 234));
+        panelCapPanda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         capPandaImg.setForeground(new java.awt.Color(255, 255, 255));
         capPandaImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         capPandaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/cap-panda.png"))); // NOI18N
+        panelCapPanda.add(capPandaImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, -1, 68));
 
-        panelKode9.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeCapPanda.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA9.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA9.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA9.setText("B3");
+        kodeCapPanda.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeCapPanda.setForeground(new java.awt.Color(234, 234, 234));
+        kodeCapPanda.setText("B3");
 
-        javax.swing.GroupLayout panelKode9Layout = new javax.swing.GroupLayout(panelKode9);
-        panelKode9.setLayout(panelKode9Layout);
-        panelKode9Layout.setHorizontalGroup(
-            panelKode9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode9Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeCapPandaLayout = new javax.swing.GroupLayout(panelKodeCapPanda);
+        panelKodeCapPanda.setLayout(panelKodeCapPandaLayout);
+        panelKodeCapPandaLayout.setHorizontalGroup(
+            panelKodeCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeCapPandaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA9)
+                .addComponent(kodeCapPanda)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode9Layout.setVerticalGroup(
-            panelKode9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode9Layout.createSequentialGroup()
-                .addComponent(kodeA9)
+        panelKodeCapPandaLayout.setVerticalGroup(
+            panelKodeCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeCapPandaLayout.createSequentialGroup()
+                .addComponent(kodeCapPanda)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga8.setBackground(new java.awt.Color(37, 42, 52));
+        panelCapPanda.add(panelKodeCapPanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA9.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA9.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA9.setText("Rp. 7.000");
+        panelHargaCapPanda.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga8Layout = new javax.swing.GroupLayout(panelHarga8);
-        panelHarga8.setLayout(panelHarga8Layout);
-        panelHarga8Layout.setHorizontalGroup(
-            panelHarga8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga8Layout.createSequentialGroup()
+        hargaCapPanda.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaCapPanda.setForeground(new java.awt.Color(255, 255, 255));
+        hargaCapPanda.setText("Rp. 7.000");
+
+        javax.swing.GroupLayout panelHargaCapPandaLayout = new javax.swing.GroupLayout(panelHargaCapPanda);
+        panelHargaCapPanda.setLayout(panelHargaCapPandaLayout);
+        panelHargaCapPandaLayout.setHorizontalGroup(
+            panelHargaCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaCapPandaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaCapPanda, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga8Layout.setVerticalGroup(
-            panelHarga8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaCapPandaLayout.setVerticalGroup(
+            panelHargaCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaCapPanda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelCapPandaLayout = new javax.swing.GroupLayout(panelCapPanda);
-        panelCapPanda.setLayout(panelCapPandaLayout);
-        panelCapPandaLayout.setHorizontalGroup(
-            panelCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCapPandaLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(capPandaImg, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelCapPandaLayout.createSequentialGroup()
+        panelCapPanda.add(panelHargaCapPanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 15));
+
+        panelStockCapPanda.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockCapPanda.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockCapPanda.setForeground(new java.awt.Color(234, 234, 234));
+        stockCapPanda.setText("10");
+
+        javax.swing.GroupLayout panelStockCapPandaLayout = new javax.swing.GroupLayout(panelStockCapPanda);
+        panelStockCapPanda.setLayout(panelStockCapPandaLayout);
+        panelStockCapPandaLayout.setHorizontalGroup(
+            panelStockCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockCapPandaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelKode9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        panelCapPandaLayout.setVerticalGroup(
-            panelCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelCapPandaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(capPandaImg, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        jPanel17.add(panelCapPanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 100, 100));
-
-        jPanel14.setBackground(new java.awt.Color(234, 234, 234));
-
-        cocaColaImg7.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/green-sands.png"))); // NOI18N
-
-        panelKode10.setBackground(new java.awt.Color(37, 42, 52));
-
-        kodeA10.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA10.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA10.setText("C3");
-
-        javax.swing.GroupLayout panelKode10Layout = new javax.swing.GroupLayout(panelKode10);
-        panelKode10.setLayout(panelKode10Layout);
-        panelKode10Layout.setHorizontalGroup(
-            panelKode10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(kodeA10)
+                .addComponent(stockCapPanda)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode10Layout.setVerticalGroup(
-            panelKode10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode10Layout.createSequentialGroup()
-                .addComponent(kodeA10)
+        panelStockCapPandaLayout.setVerticalGroup(
+            panelStockCapPandaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockCapPandaLayout.createSequentialGroup()
+                .addComponent(stockCapPanda)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga9.setBackground(new java.awt.Color(37, 42, 52));
+        panelCapPanda.add(panelStockCapPanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
 
-        hargaA10.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA10.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA10.setText("Rp. 7.000");
+        panelBackgroundMinuman.add(panelCapPanda, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 100, 100));
 
-        javax.swing.GroupLayout panelHarga9Layout = new javax.swing.GroupLayout(panelHarga9);
-        panelHarga9.setLayout(panelHarga9Layout);
-        panelHarga9Layout.setHorizontalGroup(
-            panelHarga9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        panelHarga9Layout.setVerticalGroup(
-            panelHarga9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        panelGreenSands.setBackground(new java.awt.Color(234, 234, 234));
+        panelGreenSands.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        greenSandsImg.setForeground(new java.awt.Color(255, 255, 255));
+        greenSandsImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        greenSandsImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/green-sands.png"))); // NOI18N
+        panelGreenSands.add(greenSandsImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
+
+        panelKodeGreenSands.setBackground(new java.awt.Color(37, 42, 52));
+
+        kodeGreenSands.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeGreenSands.setForeground(new java.awt.Color(234, 234, 234));
+        kodeGreenSands.setText("C3");
+
+        javax.swing.GroupLayout panelKodeGreenSandsLayout = new javax.swing.GroupLayout(panelKodeGreenSands);
+        panelKodeGreenSands.setLayout(panelKodeGreenSandsLayout);
+        panelKodeGreenSandsLayout.setHorizontalGroup(
+            panelKodeGreenSandsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeGreenSandsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(kodeGreenSands)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg7, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        panelKodeGreenSandsLayout.setVerticalGroup(
+            panelKodeGreenSandsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeGreenSandsLayout.createSequentialGroup()
+                .addComponent(kodeGreenSands)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 100, 100));
+        panelGreenSands.add(panelKodeGreenSands, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
+
+        panelHargaGreenSands.setBackground(new java.awt.Color(37, 42, 52));
+
+        hargaGreenSands.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaGreenSands.setForeground(new java.awt.Color(255, 255, 255));
+        hargaGreenSands.setText("Rp. 7.000");
+
+        javax.swing.GroupLayout panelHargaGreenSandsLayout = new javax.swing.GroupLayout(panelHargaGreenSands);
+        panelHargaGreenSands.setLayout(panelHargaGreenSandsLayout);
+        panelHargaGreenSandsLayout.setHorizontalGroup(
+            panelHargaGreenSandsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaGreenSandsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hargaGreenSands, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        panelHargaGreenSandsLayout.setVerticalGroup(
+            panelHargaGreenSandsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaGreenSands, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        panelGreenSands.add(panelHargaGreenSands, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 15));
+
+        panelStockGreenSands.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockGreenSands.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockGreenSands.setForeground(new java.awt.Color(234, 234, 234));
+        stockGreenSands.setText("10");
+
+        javax.swing.GroupLayout panelStockGreenSandsLayout = new javax.swing.GroupLayout(panelStockGreenSands);
+        panelStockGreenSands.setLayout(panelStockGreenSandsLayout);
+        panelStockGreenSandsLayout.setHorizontalGroup(
+            panelStockGreenSandsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockGreenSandsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockGreenSands)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelStockGreenSandsLayout.setVerticalGroup(
+            panelStockGreenSandsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockGreenSandsLayout.createSequentialGroup()
+                .addComponent(stockGreenSands)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        panelGreenSands.add(panelStockGreenSands, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelGreenSands, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 100, 100));
 
         panelNescafeOriginal.setBackground(new java.awt.Color(234, 234, 234));
+        panelNescafeOriginal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg9.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/nescafe-original.png"))); // NOI18N
+        nescafeOriginalImg.setForeground(new java.awt.Color(255, 255, 255));
+        nescafeOriginalImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nescafeOriginalImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/nescafe-original.png"))); // NOI18N
+        panelNescafeOriginal.add(nescafeOriginalImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode11.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeNescafeOriginal.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA11.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA11.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA11.setText("A4");
+        kodeNescafeOriginal.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeNescafeOriginal.setForeground(new java.awt.Color(234, 234, 234));
+        kodeNescafeOriginal.setText("A4");
 
-        javax.swing.GroupLayout panelKode11Layout = new javax.swing.GroupLayout(panelKode11);
-        panelKode11.setLayout(panelKode11Layout);
-        panelKode11Layout.setHorizontalGroup(
-            panelKode11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode11Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeNescafeOriginalLayout = new javax.swing.GroupLayout(panelKodeNescafeOriginal);
+        panelKodeNescafeOriginal.setLayout(panelKodeNescafeOriginalLayout);
+        panelKodeNescafeOriginalLayout.setHorizontalGroup(
+            panelKodeNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeNescafeOriginalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA11)
+                .addComponent(kodeNescafeOriginal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode11Layout.setVerticalGroup(
-            panelKode11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode11Layout.createSequentialGroup()
-                .addComponent(kodeA11)
+        panelKodeNescafeOriginalLayout.setVerticalGroup(
+            panelKodeNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeNescafeOriginalLayout.createSequentialGroup()
+                .addComponent(kodeNescafeOriginal)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga10.setBackground(new java.awt.Color(37, 42, 52));
+        panelNescafeOriginal.add(panelKodeNescafeOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA11.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA11.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA11.setText("Rp. 8.000");
+        panelHargaNescafeOriginal.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga10Layout = new javax.swing.GroupLayout(panelHarga10);
-        panelHarga10.setLayout(panelHarga10Layout);
-        panelHarga10Layout.setHorizontalGroup(
-            panelHarga10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga10Layout.createSequentialGroup()
+        hargaNescafeOriginal.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaNescafeOriginal.setForeground(new java.awt.Color(255, 255, 255));
+        hargaNescafeOriginal.setText("Rp. 8.000");
+
+        javax.swing.GroupLayout panelHargaNescafeOriginalLayout = new javax.swing.GroupLayout(panelHargaNescafeOriginal);
+        panelHargaNescafeOriginal.setLayout(panelHargaNescafeOriginalLayout);
+        panelHargaNescafeOriginalLayout.setHorizontalGroup(
+            panelHargaNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaNescafeOriginalLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaNescafeOriginal, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga10Layout.setVerticalGroup(
-            panelHarga10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaNescafeOriginalLayout.setVerticalGroup(
+            panelHargaNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaNescafeOriginal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelNescafeOriginalLayout = new javax.swing.GroupLayout(panelNescafeOriginal);
-        panelNescafeOriginal.setLayout(panelNescafeOriginalLayout);
-        panelNescafeOriginalLayout.setHorizontalGroup(
-            panelNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNescafeOriginalLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelNescafeOriginalLayout.createSequentialGroup()
+        panelNescafeOriginal.add(panelHargaNescafeOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 80, -1, 15));
+
+        panelStockNescafeOriginal.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockNescafeOriginal.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockNescafeOriginal.setForeground(new java.awt.Color(234, 234, 234));
+        stockNescafeOriginal.setText("10");
+
+        javax.swing.GroupLayout panelStockNescafeOriginalLayout = new javax.swing.GroupLayout(panelStockNescafeOriginal);
+        panelStockNescafeOriginal.setLayout(panelStockNescafeOriginalLayout);
+        panelStockNescafeOriginalLayout.setHorizontalGroup(
+            panelStockNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockNescafeOriginalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelKode11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        panelNescafeOriginalLayout.setVerticalGroup(
-            panelNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNescafeOriginalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg9, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        jPanel17.add(panelNescafeOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
-
-        panelNescafeMocha.setBackground(new java.awt.Color(234, 234, 234));
-
-        cocaColaImg8.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/nescafe-mocha.png"))); // NOI18N
-
-        panelKode13.setBackground(new java.awt.Color(37, 42, 52));
-
-        kodeA13.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA13.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA13.setText("C4");
-
-        javax.swing.GroupLayout panelKode13Layout = new javax.swing.GroupLayout(panelKode13);
-        panelKode13.setLayout(panelKode13Layout);
-        panelKode13Layout.setHorizontalGroup(
-            panelKode13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(kodeA13)
+                .addComponent(stockNescafeOriginal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode13Layout.setVerticalGroup(
-            panelKode13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode13Layout.createSequentialGroup()
-                .addComponent(kodeA13)
+        panelStockNescafeOriginalLayout.setVerticalGroup(
+            panelStockNescafeOriginalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockNescafeOriginalLayout.createSequentialGroup()
+                .addComponent(stockNescafeOriginal)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga12.setBackground(new java.awt.Color(37, 42, 52));
+        panelNescafeOriginal.add(panelStockNescafeOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
 
-        hargaA13.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA13.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA13.setText("Rp. 8.000");
-
-        javax.swing.GroupLayout panelHarga12Layout = new javax.swing.GroupLayout(panelHarga12);
-        panelHarga12.setLayout(panelHarga12Layout);
-        panelHarga12Layout.setHorizontalGroup(
-            panelHarga12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga12Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA13, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        panelHarga12Layout.setVerticalGroup(
-            panelHarga12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout panelNescafeMochaLayout = new javax.swing.GroupLayout(panelNescafeMocha);
-        panelNescafeMocha.setLayout(panelNescafeMochaLayout);
-        panelNescafeMochaLayout.setHorizontalGroup(
-            panelNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNescafeMochaLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelNescafeMochaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panelKode13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        panelNescafeMochaLayout.setVerticalGroup(
-            panelNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNescafeMochaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cocaColaImg8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        jPanel17.add(panelNescafeMocha, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 100, 100));
+        panelBackgroundMinuman.add(panelNescafeOriginal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 100, 100));
 
         panelNescafeLatte.setBackground(new java.awt.Color(234, 234, 234));
+        panelNescafeLatte.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cocaColaImg6.setForeground(new java.awt.Color(255, 255, 255));
-        cocaColaImg6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cocaColaImg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/nescafe-latte.png"))); // NOI18N
+        nescafeLatteImg.setForeground(new java.awt.Color(255, 255, 255));
+        nescafeLatteImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nescafeLatteImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/nescafe-latte.png"))); // NOI18N
+        panelNescafeLatte.add(nescafeLatteImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
 
-        panelKode12.setBackground(new java.awt.Color(37, 42, 52));
+        panelKodeNescafeLatte.setBackground(new java.awt.Color(37, 42, 52));
 
-        kodeA12.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        kodeA12.setForeground(new java.awt.Color(234, 234, 234));
-        kodeA12.setText("B4");
+        kodeNescafeLatte.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeNescafeLatte.setForeground(new java.awt.Color(234, 234, 234));
+        kodeNescafeLatte.setText("B4");
 
-        javax.swing.GroupLayout panelKode12Layout = new javax.swing.GroupLayout(panelKode12);
-        panelKode12.setLayout(panelKode12Layout);
-        panelKode12Layout.setHorizontalGroup(
-            panelKode12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode12Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelKodeNescafeLatteLayout = new javax.swing.GroupLayout(panelKodeNescafeLatte);
+        panelKodeNescafeLatte.setLayout(panelKodeNescafeLatteLayout);
+        panelKodeNescafeLatteLayout.setHorizontalGroup(
+            panelKodeNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeNescafeLatteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(kodeA12)
+                .addComponent(kodeNescafeLatte)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelKode12Layout.setVerticalGroup(
-            panelKode12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelKode12Layout.createSequentialGroup()
-                .addComponent(kodeA12)
+        panelKodeNescafeLatteLayout.setVerticalGroup(
+            panelKodeNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeNescafeLatteLayout.createSequentialGroup()
+                .addComponent(kodeNescafeLatte)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelHarga11.setBackground(new java.awt.Color(37, 42, 52));
+        panelNescafeLatte.add(panelKodeNescafeLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
 
-        hargaA12.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
-        hargaA12.setForeground(new java.awt.Color(255, 255, 255));
-        hargaA12.setText("Rp. 8.000");
+        panelHargaNescafeLatte.setBackground(new java.awt.Color(37, 42, 52));
 
-        javax.swing.GroupLayout panelHarga11Layout = new javax.swing.GroupLayout(panelHarga11);
-        panelHarga11.setLayout(panelHarga11Layout);
-        panelHarga11Layout.setHorizontalGroup(
-            panelHarga11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHarga11Layout.createSequentialGroup()
+        hargaNescafeLatte.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaNescafeLatte.setForeground(new java.awt.Color(255, 255, 255));
+        hargaNescafeLatte.setText("Rp. 8.000");
+
+        javax.swing.GroupLayout panelHargaNescafeLatteLayout = new javax.swing.GroupLayout(panelHargaNescafeLatte);
+        panelHargaNescafeLatte.setLayout(panelHargaNescafeLatteLayout);
+        panelHargaNescafeLatteLayout.setHorizontalGroup(
+            panelHargaNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaNescafeLatteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaA12, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(hargaNescafeLatte, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelHarga11Layout.setVerticalGroup(
-            panelHarga11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hargaA12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panelHargaNescafeLatteLayout.setVerticalGroup(
+            panelHargaNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaNescafeLatte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelNescafeLatteLayout = new javax.swing.GroupLayout(panelNescafeLatte);
-        panelNescafeLatte.setLayout(panelNescafeLatteLayout);
-        panelNescafeLatteLayout.setHorizontalGroup(
-            panelNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNescafeLatteLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(cocaColaImg6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelNescafeLatte.add(panelHargaNescafeLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 80, -1, 15));
+
+        panelStockNescafeLatte.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockNescafeLatte.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockNescafeLatte.setForeground(new java.awt.Color(234, 234, 234));
+        stockNescafeLatte.setText("10");
+
+        javax.swing.GroupLayout panelStockNescafeLatteLayout = new javax.swing.GroupLayout(panelStockNescafeLatte);
+        panelStockNescafeLatte.setLayout(panelStockNescafeLatteLayout);
+        panelStockNescafeLatteLayout.setHorizontalGroup(
+            panelStockNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockNescafeLatteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stockNescafeLatte)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelNescafeLatteLayout.createSequentialGroup()
+        );
+        panelStockNescafeLatteLayout.setVerticalGroup(
+            panelStockNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockNescafeLatteLayout.createSequentialGroup()
+                .addComponent(stockNescafeLatte)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        panelNescafeLatte.add(panelStockNescafeLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
+
+        panelBackgroundMinuman.add(panelNescafeLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 100, 100));
+
+        panelNescafeMocha.setBackground(new java.awt.Color(234, 234, 234));
+        panelNescafeMocha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        nescafeMochaImg.setForeground(new java.awt.Color(255, 255, 255));
+        nescafeMochaImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nescafeMochaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/images/nescafe-mocha.png"))); // NOI18N
+        panelNescafeMocha.add(nescafeMochaImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 6, 48, 68));
+
+        panelKodeNescafeMocha.setBackground(new java.awt.Color(37, 42, 52));
+
+        kodeNescafeMocha.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        kodeNescafeMocha.setForeground(new java.awt.Color(234, 234, 234));
+        kodeNescafeMocha.setText("C4");
+
+        javax.swing.GroupLayout panelKodeNescafeMochaLayout = new javax.swing.GroupLayout(panelKodeNescafeMocha);
+        panelKodeNescafeMocha.setLayout(panelKodeNescafeMochaLayout);
+        panelKodeNescafeMochaLayout.setHorizontalGroup(
+            panelKodeNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeNescafeMochaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelKode12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelHarga11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(kodeNescafeMocha)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelKodeNescafeMochaLayout.setVerticalGroup(
+            panelKodeNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelKodeNescafeMochaLayout.createSequentialGroup()
+                .addComponent(kodeNescafeMocha)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        panelNescafeMocha.add(panelKodeNescafeMocha, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, -1, -1));
+
+        panelHargaNescafeMocha.setBackground(new java.awt.Color(37, 42, 52));
+
+        hargaNescafeMocha.setFont(new java.awt.Font("Montserrat", 1, 8)); // NOI18N
+        hargaNescafeMocha.setForeground(new java.awt.Color(255, 255, 255));
+        hargaNescafeMocha.setText("Rp. 8.000");
+
+        javax.swing.GroupLayout panelHargaNescafeMochaLayout = new javax.swing.GroupLayout(panelHargaNescafeMocha);
+        panelHargaNescafeMocha.setLayout(panelHargaNescafeMochaLayout);
+        panelHargaNescafeMochaLayout.setHorizontalGroup(
+            panelHargaNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHargaNescafeMochaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hargaNescafeMocha, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        panelNescafeLatteLayout.setVerticalGroup(
-            panelNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNescafeLatteLayout.createSequentialGroup()
+        panelHargaNescafeMochaLayout.setVerticalGroup(
+            panelHargaNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hargaNescafeMocha, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        panelNescafeMocha.add(panelHargaNescafeMocha, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 80, -1, 15));
+
+        panelStockNescafeMocha.setBackground(new java.awt.Color(37, 42, 52));
+
+        stockNescafeMocha.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        stockNescafeMocha.setForeground(new java.awt.Color(234, 234, 234));
+        stockNescafeMocha.setText("10");
+
+        javax.swing.GroupLayout panelStockNescafeMochaLayout = new javax.swing.GroupLayout(panelStockNescafeMocha);
+        panelStockNescafeMocha.setLayout(panelStockNescafeMochaLayout);
+        panelStockNescafeMochaLayout.setHorizontalGroup(
+            panelStockNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockNescafeMochaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cocaColaImg6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelNescafeLatteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelHarga11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelKode12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addComponent(stockNescafeMocha)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelStockNescafeMochaLayout.setVerticalGroup(
+            panelStockNescafeMochaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelStockNescafeMochaLayout.createSequentialGroup()
+                .addComponent(stockNescafeMocha)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel17.add(panelNescafeLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 100, 100));
+        panelNescafeMocha.add(panelStockNescafeMocha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 3, -1, -1));
 
-        jPanel15.setBackground(new java.awt.Color(234, 234, 234));
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelBackgroundMinuman.add(panelNescafeMocha, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 100, 100));
 
-        jPanel1.setBackground(new java.awt.Color(37, 42, 52));
+        panelOutput.setBackground(new java.awt.Color(60, 255, 138));
+        panelOutput.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panelOutput.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelOutputMouseClicked(evt);
+            }
+        });
+        panelOutput.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
+        panelgetItem.setBackground(new java.awt.Color(234, 234, 234));
+        panelgetItem.setForeground(new java.awt.Color(0, 0, 0));
+        panelgetItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout panelgetItemLayout = new javax.swing.GroupLayout(panelgetItem);
+        panelgetItem.setLayout(panelgetItemLayout);
+        panelgetItemLayout.setHorizontalGroup(
+            panelgetItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelgetItemLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(labelOutput)
+                .addContainerGap(105, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
+        panelgetItemLayout.setVerticalGroup(
+            panelgetItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelgetItemLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelOutput)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        jPanel15.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 30));
+        panelOutput.add(panelgetItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 30));
 
         getItemLabel.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         getItemLabel.setForeground(new java.awt.Color(37, 42, 52));
         getItemLabel.setText("Ambil Disini");
-        jPanel15.add(getItemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+        panelOutput.add(getItemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         panelEnterMoney.setBackground(new java.awt.Color(234, 234, 234));
         panelEnterMoney.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1268,7 +1344,7 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(panelLayout.createSequentialGroup()
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelBackgroundMinuman, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panelInformation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1284,7 +1360,7 @@ public class mainFrame extends javax.swing.JFrame {
                                     .addComponent(enterMoneyLabel)))))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGap(83, 83, 83)
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(panelOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
@@ -1302,9 +1378,9 @@ public class mainFrame extends javax.swing.JFrame {
                         .addComponent(enterMoneyIcon)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(enterMoneyLabel))
-                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelBackgroundMinuman, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
-                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
@@ -1313,6 +1389,7 @@ public class mainFrame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
 
     private void panelEnterMoneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEnterMoneyMouseClicked
 		//Dialog masukkan nominal
@@ -1354,7 +1431,7 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt3ActionPerformed
 
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
-		controller.selectItem(currentSaldo, itemLabel, getItemLabel);
+		controller.selectItem(currentSaldo, itemLabel, labelOutput, getItemLabel);
     }//GEN-LAST:event_btEnterActionPerformed
 
     private void btDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeleteActionPerformed
@@ -1372,6 +1449,10 @@ public class mainFrame extends javax.swing.JFrame {
     private void btCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCActionPerformed
 		controller.typingKode(itemLabel, "C");
     }//GEN-LAST:event_btCActionPerformed
+
+    private void panelOutputMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelOutputMouseClicked
+        controller.getOutputItem(getItemLabel, labelOutput);
+    }//GEN-LAST:event_panelOutputMouseClicked
 
 	public static void main(String args[]) {
 		/* Set the Nimbus look and feel */
@@ -1406,6 +1487,7 @@ public class mainFrame extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel PocariSweatImg;
     private javax.swing.JButton bt1;
     private javax.swing.JButton bt2;
     private javax.swing.JButton bt3;
@@ -1418,50 +1500,46 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel btEnterMoney;
     private javax.swing.JLabel capPandaImg;
     private javax.swing.JLabel cocaColaImg;
-    private javax.swing.JLabel cocaColaImg1;
-    private javax.swing.JLabel cocaColaImg2;
-    private javax.swing.JLabel cocaColaImg3;
-    private javax.swing.JLabel cocaColaImg4;
-    private javax.swing.JLabel cocaColaImg5;
-    private javax.swing.JLabel cocaColaImg6;
-    private javax.swing.JLabel cocaColaImg7;
-    private javax.swing.JLabel cocaColaImg8;
-    private javax.swing.JLabel cocaColaImg9;
+    private javax.swing.JLabel cocaColaZeroImg;
     private javax.swing.JLabel currentSaldo;
     private javax.swing.JLabel enterMoneyIcon;
     private javax.swing.JLabel enterMoneyLabel;
+    private javax.swing.JLabel fantaOrangeImg;
+    private javax.swing.JLabel fantaStrawberryImg;
     private javax.swing.JLabel getItemLabel;
-    private javax.swing.JLabel hargaA1;
-    private javax.swing.JLabel hargaA10;
-    private javax.swing.JLabel hargaA11;
-    private javax.swing.JLabel hargaA12;
-    private javax.swing.JLabel hargaA13;
-    private javax.swing.JLabel hargaA3;
-    private javax.swing.JLabel hargaA4;
-    private javax.swing.JLabel hargaA5;
-    private javax.swing.JLabel hargaA6;
-    private javax.swing.JLabel hargaA7;
-    private javax.swing.JLabel hargaA8;
-    private javax.swing.JLabel hargaA9;
+    private javax.swing.JLabel greenSandsImg;
+    private javax.swing.JLabel hargaCapPanda;
+    private javax.swing.JLabel hargaCocaCola;
+    private javax.swing.JLabel hargaCocaColaZero;
+    private javax.swing.JLabel hargaFantaOrange;
+    private javax.swing.JLabel hargaFantaStrawberry;
+    private javax.swing.JLabel hargaGreenSands;
+    private javax.swing.JLabel hargaNescafeLatte;
+    private javax.swing.JLabel hargaNescafeMocha;
+    private javax.swing.JLabel hargaNescafeOriginal;
+    private javax.swing.JLabel hargaPocariSweat;
+    private javax.swing.JLabel hargaSprite;
+    private javax.swing.JLabel hargaSpriteLight;
     private javax.swing.JLabel itemLabel;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JLabel kodeA1;
-    private javax.swing.JLabel kodeA10;
-    private javax.swing.JLabel kodeA11;
-    private javax.swing.JLabel kodeA12;
-    private javax.swing.JLabel kodeA13;
-    private javax.swing.JLabel kodeA3;
-    private javax.swing.JLabel kodeA4;
-    private javax.swing.JLabel kodeA5;
-    private javax.swing.JLabel kodeA6;
-    private javax.swing.JLabel kodeA7;
-    private javax.swing.JLabel kodeA8;
-    private javax.swing.JLabel kodeA9;
+    private javax.swing.JLabel kodeCapPanda;
+    private javax.swing.JLabel kodeCocaCola;
+    private javax.swing.JLabel kodeCocaColaZero;
+    private javax.swing.JLabel kodeFantaOrange;
+    private javax.swing.JLabel kodeFantaStrawberry;
+    private javax.swing.JLabel kodeGreenSands;
     private javax.swing.JLabel kodeMinumanLabel;
+    private javax.swing.JLabel kodeNescafeLatte;
+    private javax.swing.JLabel kodeNescafeMocha;
+    private javax.swing.JLabel kodeNescafeOriginal;
+    private javax.swing.JLabel kodePocariSweat;
+    private javax.swing.JLabel kodeSprite;
+    private javax.swing.JLabel kodeSpriteLight;
+    private javax.swing.JLabel labelOutput;
+    private javax.swing.JLabel nescafeLatteImg;
+    private javax.swing.JLabel nescafeMochaImg;
+    private javax.swing.JLabel nescafeOriginalImg;
     private javax.swing.JPanel panel;
+    private javax.swing.JPanel panelBackgroundMinuman;
     private javax.swing.JPanel panelButton;
     private javax.swing.JPanel panelCapPanda;
     private javax.swing.JPanel panelCocaCola;
@@ -1469,39 +1547,67 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel panelEnterMoney;
     private javax.swing.JPanel panelFantaOrange;
     private javax.swing.JPanel panelFantaStrawberry;
-    private javax.swing.JPanel panelHarga;
-    private javax.swing.JPanel panelHarga10;
-    private javax.swing.JPanel panelHarga11;
-    private javax.swing.JPanel panelHarga12;
-    private javax.swing.JPanel panelHarga2;
-    private javax.swing.JPanel panelHarga3;
-    private javax.swing.JPanel panelHarga4;
-    private javax.swing.JPanel panelHarga5;
-    private javax.swing.JPanel panelHarga6;
-    private javax.swing.JPanel panelHarga7;
-    private javax.swing.JPanel panelHarga8;
-    private javax.swing.JPanel panelHarga9;
+    private javax.swing.JPanel panelGreenSands;
+    private javax.swing.JPanel panelHargaCapPanda;
+    private javax.swing.JPanel panelHargaCocaCola;
+    private javax.swing.JPanel panelHargaCocaColaZero;
+    private javax.swing.JPanel panelHargaFantaOrange;
+    private javax.swing.JPanel panelHargaFantaStrawberry;
+    private javax.swing.JPanel panelHargaGreenSands;
+    private javax.swing.JPanel panelHargaNescafeLatte;
+    private javax.swing.JPanel panelHargaNescafeMocha;
+    private javax.swing.JPanel panelHargaNescafeOriginal;
+    private javax.swing.JPanel panelHargaPocariSweat;
+    private javax.swing.JPanel panelHargaSprite;
+    private javax.swing.JPanel panelHargaSpriteLight;
     private javax.swing.JPanel panelInformation;
-    private javax.swing.JPanel panelKode1;
-    private javax.swing.JPanel panelKode10;
-    private javax.swing.JPanel panelKode11;
-    private javax.swing.JPanel panelKode12;
-    private javax.swing.JPanel panelKode13;
-    private javax.swing.JPanel panelKode3;
-    private javax.swing.JPanel panelKode4;
-    private javax.swing.JPanel panelKode5;
-    private javax.swing.JPanel panelKode6;
-    private javax.swing.JPanel panelKode7;
-    private javax.swing.JPanel panelKode8;
-    private javax.swing.JPanel panelKode9;
+    private javax.swing.JPanel panelKodeCapPanda;
+    private javax.swing.JPanel panelKodeCocaCola;
+    private javax.swing.JPanel panelKodeCocaColaZero;
+    private javax.swing.JPanel panelKodeFantaOrange;
+    private javax.swing.JPanel panelKodeFantaStrawberry;
+    private javax.swing.JPanel panelKodeGreenSands;
+    private javax.swing.JPanel panelKodeNescafeLatte;
+    private javax.swing.JPanel panelKodeNescafeMocha;
+    private javax.swing.JPanel panelKodeNescafeOriginal;
+    private javax.swing.JPanel panelKodePocariSweat;
+    private javax.swing.JPanel panelKodeSprite;
+    private javax.swing.JPanel panelKodeSpriteLight;
     private javax.swing.JPanel panelNescafeLatte;
     private javax.swing.JPanel panelNescafeMocha;
     private javax.swing.JPanel panelNescafeOriginal;
+    private javax.swing.JPanel panelOutput;
     private javax.swing.JPanel panelPocariSweat;
     private javax.swing.JPanel panelSprite;
     private javax.swing.JPanel panelSpriteLight;
+    private javax.swing.JPanel panelStockCapPanda;
+    private javax.swing.JPanel panelStockCocaCola;
+    private javax.swing.JPanel panelStockCocaColaZero;
+    private javax.swing.JPanel panelStockFantaOrange;
+    private javax.swing.JPanel panelStockFantaStrawberry;
+    private javax.swing.JPanel panelStockGreenSands;
+    private javax.swing.JPanel panelStockNescafeLatte;
+    private javax.swing.JPanel panelStockNescafeMocha;
+    private javax.swing.JPanel panelStockNescafeOriginal;
+    private javax.swing.JPanel panelStockPocariSweat;
+    private javax.swing.JPanel panelStockSprite;
+    private javax.swing.JPanel panelStockSpriteLight;
+    private javax.swing.JPanel panelgetItem;
     private javax.swing.JLabel saldoLabel;
     private javax.swing.JSeparator separator;
+    private javax.swing.JLabel spriteImg;
     private javax.swing.JLabel spriteLightImg;
+    private javax.swing.JLabel stockCapPanda;
+    private javax.swing.JLabel stockCocaCola;
+    private javax.swing.JLabel stockCocaColaZero;
+    private javax.swing.JLabel stockFantaOrange;
+    private javax.swing.JLabel stockFantaStrawberry;
+    private javax.swing.JLabel stockGreenSands;
+    private javax.swing.JLabel stockNescafeLatte;
+    private javax.swing.JLabel stockNescafeMocha;
+    private javax.swing.JLabel stockNescafeOriginal;
+    private javax.swing.JLabel stockPocariSweat;
+    private javax.swing.JLabel stockSprite;
+    private javax.swing.JLabel stockSpriteLight;
     // End of variables declaration//GEN-END:variables
 }
