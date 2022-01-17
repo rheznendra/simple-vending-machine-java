@@ -21,7 +21,7 @@ public class vMachineUI extends javax.swing.JFrame {
 
 		initComponents();
 		getItemLabel.setVisible(false);
-		getStockBarang();
+		getStockBarang(false);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -1214,7 +1214,7 @@ public class vMachineUI extends javax.swing.JFrame {
 
         enterMoneyIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vendingmachine/icon/icons8_collapse_arrow_16px.png"))); // NOI18N
 
-        panelInformation.setBackground(new java.awt.Color(255, 255, 255));
+        panelInformation.setBackground(new java.awt.Color(234, 234, 234));
         panelInformation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         saldoLabel.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
@@ -1452,7 +1452,7 @@ public class vMachineUI extends javax.swing.JFrame {
 
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
 		controller.selectItem(labelCurrentSaldo, itemLabel, labelOutput, getItemLabel);
-		getStockBarang();
+		getStockBarang(true);
     }//GEN-LAST:event_btEnterActionPerformed
 
     private void btDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeleteActionPerformed
@@ -1475,8 +1475,8 @@ public class vMachineUI extends javax.swing.JFrame {
 		controller.resetOutput(getItemLabel, labelOutput);
     }//GEN-LAST:event_panelOutputMouseClicked
 
-	private void getStockBarang() {
-		controller.setStockBarang(stockCocaCola, stockCocaColaZero, stockSprite, stockSpriteLight, stockFantaStrawberry, stockFantaOrange, stockPocariSweat, stockCapPanda, stockGreenSands, stockNescafeOriginal, stockNescafeLatte, stockNescafeMocha);
+	private void getStockBarang(boolean refreshBarang) {
+		controller.setStockBarang(refreshBarang, stockCocaCola, stockCocaColaZero, stockSprite, stockSpriteLight, stockFantaStrawberry, stockFantaOrange, stockPocariSweat, stockCapPanda, stockGreenSands, stockNescafeOriginal, stockNescafeLatte, stockNescafeMocha);
 	}
 
 	public static void main(String args[]) {

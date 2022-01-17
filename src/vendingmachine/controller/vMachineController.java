@@ -31,9 +31,13 @@ public class vMachineController {
 
 	vMachineModel model = new vMachineModel();
 
+	public vMachineController() {
+		loadBarang();
+	}
+
 	public void setSaldo(JLabel label, int saldo) {
 		model.setSaldo(saldo);
-		label.setText(String.valueOf(new CurrencyID(model.getSaldo())));
+		label.setText(currentSaldo());
 	}
 
 	public void typingKode(JLabel label, String text) {
@@ -58,7 +62,8 @@ public class vMachineController {
 
 	public void selectItem(JLabel labelSaldo, JLabel labelKode, JLabel labelOutput, JLabel getItemLabel) {
 
-		if (model.getKode().length() >= 1) {
+		//Cek jika input kode adalah 2 huruf
+		if (model.getKode().length() == 2) {
 
 			String loopKode, loopNama, kode = model.getKode();
 			int loopHarga, loopStock;
@@ -69,16 +74,26 @@ public class vMachineController {
 				loopHarga = minuman.getHarga();
 				loopNama = minuman.getNama();
 				loopStock = minuman.getStock();
+
+				//Jika looping sesuai dengan input kode user
 				if (loopKode.equalsIgnoreCase(kode)) {
+
+					//Jika stock lebih dari sama dengan 1
 					if (loopStock >= 1) {
+
+						//Jika saldo user mencukupi
 						if (model.getSaldo() >= loopHarga) {
-							model.setSaldo(-loopHarga);
-							model.setKode("");
-							labelSaldo.setText(String.valueOf(new CurrencyID(model.getSaldo())));
-							labelKode.setText("");
-							getItemLabel.setVisible(true);
-							rotate(labelOutput, loopNama);
-							insertTransaksi(loopKode);
+
+							model.setSaldo(-loopHarga); //kurangi saldo user
+							labelSaldo.setText(currentSaldo());
+
+							model.setKode("");	//reset input kode di model
+							labelKode.setText("");	//reset label input kode
+
+							getItemLabel.setVisible(true); //tampilkan label "Ambil Disini"
+							showImageOutput(labelOutput, loopNama);	//tampilkan gambar di output
+
+							insertTransaksi(loopKode); //insert transaksi ke database
 						} else {
 							JOptionPane.showMessageDialog(null, "Saldo Tidak Mencukupi.");
 						}
@@ -101,7 +116,7 @@ public class vMachineController {
 		labelOutput.setIcon(null);
 	}
 
-	public void loadBarang() {
+	private void loadBarang() {
 		ArrayList<minumanModel> listMinuman = new ArrayList();
 		int hargaDB, stockDB;
 		String kodeDB, namaDB;
@@ -122,10 +137,12 @@ public class vMachineController {
 		}
 	}
 
-	public void setStockBarang(JLabel... labelItem) {
-		loadBarang();
+	public void setStockBarang(boolean refreshBarang, JLabel... labelItem) {
+		if (refreshBarang) {
+			loadBarang();
+		}
 		for (JLabel label : labelItem) {
-			for(minumanModel minuman : model.getKodeMinuman()) {
+			for (minumanModel minuman : model.getKodeMinuman()) {
 				if (label.getName().equalsIgnoreCase(minuman.getNama())) {
 					label.setText(String.valueOf(minuman.getStock()));
 					break;
@@ -134,7 +151,7 @@ public class vMachineController {
 		}
 	}
 
-	public void insertTransaksi(String kode) {
+	private void insertTransaksi(String kode) {
 		try {
 			String query = "INSERT INTO TRANSAKSI (kode_barang) VALUES ('%s')";
 			query = String.format(query, kode);
@@ -146,7 +163,11 @@ public class vMachineController {
 		}
 	}
 
-	private void rotate(JLabel label, String nama) {
+	private String currentSaldo() {
+		return String.valueOf(new CurrencyID(model.getSaldo()));
+	}
+
+	private void showImageOutput(JLabel label, String nama) {
 		try {
 			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + nama + ".png"));
 			BufferedImage rotate = rotateImg(original, -90.0d);
