@@ -2298,7 +2298,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="currentSaldo">
+            <Component class="javax.swing.JLabel" name="labelCurrentSaldo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Montserrat" size="12" style="1"/>

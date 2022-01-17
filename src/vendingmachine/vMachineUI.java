@@ -1,23 +1,23 @@
 package vendingmachine;
 
 import javax.swing.JOptionPane;
+import org.apache.commons.lang3.ArrayUtils;
 import vendingmachine.controller.vMachineController;
-import vendingmachine.models.vMachineModel;
 
 /**
  *
  * @author RZ
  */
-public class mainFrame extends javax.swing.JFrame {
+public class vMachineUI extends javax.swing.JFrame {
 
-	vMachineModel model;
 	vMachineController controller;
 
-	int saldo;
+	int saldo, inputNominal = 0;
+	int[] nominal = new int[]{2000, 5000, 10000};
+	boolean anyError;
 
-	public mainFrame() {
+	public vMachineUI() {
 		controller = new vMachineController();
-		model = controller.getModel();
 
 		initComponents();
 		getItemLabel.setVisible(false);
@@ -136,7 +136,7 @@ public class mainFrame extends javax.swing.JFrame {
         enterMoneyIcon = new javax.swing.JLabel();
         panelInformation = new javax.swing.JPanel();
         saldoLabel = new javax.swing.JLabel();
-        currentSaldo = new javax.swing.JLabel();
+        labelCurrentSaldo = new javax.swing.JLabel();
         separator = new javax.swing.JSeparator();
         itemLabel = new javax.swing.JLabel();
         kodeMinumanLabel = new javax.swing.JLabel();
@@ -1222,10 +1222,10 @@ public class mainFrame extends javax.swing.JFrame {
         saldoLabel.setText("Saldo :");
         panelInformation.add(saldoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 12, -1, -1));
 
-        currentSaldo.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
-        currentSaldo.setForeground(new java.awt.Color(37, 42, 52));
-        currentSaldo.setText("Rp. 0");
-        panelInformation.add(currentSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 12, -1, -1));
+        labelCurrentSaldo.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
+        labelCurrentSaldo.setForeground(new java.awt.Color(37, 42, 52));
+        labelCurrentSaldo.setText("Rp. 0");
+        panelInformation.add(labelCurrentSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 12, -1, -1));
         panelInformation.add(separator, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 39, 136, 10));
 
         itemLabel.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
@@ -1404,25 +1404,33 @@ public class mainFrame extends javax.swing.JFrame {
 
 
     private void panelEnterMoneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEnterMoneyMouseClicked
+		anyError = false;
+
 		//Dialog masukkan nominal
 		String dialog = JOptionPane.showInputDialog(this, "Masukkan Nominal", "Vending Machine", JOptionPane.INFORMATION_MESSAGE);
+
 		//Check Input Kosong
-		if (dialog != null && !dialog.isBlank()) {
-			//Check Input Hanya Boleh Angka
-			if (!dialog.matches("^[0-9]*$")) {
-				JOptionPane.showMessageDialog(this, "Nominal Tidak Valid.", "Terjadi Kesalahan!", JOptionPane.ERROR_MESSAGE);
-			} else {
+		if (dialog == null || dialog.isBlank()) {
+			anyError = true;
+		}
 
-				//Convert Input ke dalam Integer
-				int nominal = Integer.parseInt(dialog);
+		//Check Input Hanya Boleh Angka
+		if (!anyError && !dialog.matches("^[0-9]*$")) {
+			anyError = true;
+			JOptionPane.showMessageDialog(this, "Nominal Tidak Valid.", "Terjadi Kesalahan!", JOptionPane.ERROR_MESSAGE);
+		}
 
-				//Check Nominal Uang
-				if (nominal == 2000 || nominal == 5000 || nominal == 10000) {
-					controller.changeSaldo(currentSaldo, nominal);
-				} else {
-					JOptionPane.showMessageDialog(this, "Hanya Menerima Uang Nominal Rp. 2000, Rp. 5000, Rp. 10.000");
-				}
+		//Check Nominal Uang
+		if (!anyError) {
+			inputNominal = Integer.parseInt(dialog);
+			if (!ArrayUtils.contains(nominal, inputNominal)) {
+				anyError = true;
+				JOptionPane.showMessageDialog(this, "Hanya Menerima Uang Nominal Rp. 2000, Rp. 5000, Rp. 10.000");
 			}
+		}
+
+		if (!anyError) {
+			controller.setSaldo(labelCurrentSaldo, inputNominal);
 		}
     }//GEN-LAST:event_panelEnterMoneyMouseClicked
 
@@ -1443,7 +1451,7 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt3ActionPerformed
 
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
-		controller.selectItem(currentSaldo, itemLabel, labelOutput, getItemLabel);
+		controller.selectItem(labelCurrentSaldo, itemLabel, labelOutput, getItemLabel);
 		getStockBarang();
     }//GEN-LAST:event_btEnterActionPerformed
 
@@ -1464,7 +1472,7 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btCActionPerformed
 
     private void panelOutputMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelOutputMouseClicked
-        controller.getOutputItem(getItemLabel, labelOutput);
+		controller.resetOutput(getItemLabel, labelOutput);
     }//GEN-LAST:event_panelOutputMouseClicked
 
 	private void getStockBarang() {
@@ -1485,20 +1493,21 @@ public class mainFrame extends javax.swing.JFrame {
 				}
 			}
 		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(mainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+			java.util.logging.Logger.getLogger(vMachineUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(mainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+			java.util.logging.Logger.getLogger(vMachineUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(mainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+			java.util.logging.Logger.getLogger(vMachineUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(mainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+			java.util.logging.Logger.getLogger(vMachineUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		}
+		//</editor-fold>
 		//</editor-fold>
 
 		/* Create and display the form */
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				new mainFrame().setVisible(true);
+				new vMachineUI().setVisible(true);
 			}
 		});
 	}
@@ -1518,7 +1527,6 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel capPandaImg;
     private javax.swing.JLabel cocaColaImg;
     private javax.swing.JLabel cocaColaZeroImg;
-    private javax.swing.JLabel currentSaldo;
     private javax.swing.JLabel enterMoneyIcon;
     private javax.swing.JLabel enterMoneyLabel;
     private javax.swing.JLabel fantaOrangeImg;
@@ -1551,6 +1559,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel kodePocariSweat;
     private javax.swing.JLabel kodeSprite;
     private javax.swing.JLabel kodeSpriteLight;
+    private javax.swing.JLabel labelCurrentSaldo;
     private javax.swing.JLabel labelOutput;
     private javax.swing.JLabel nescafeLatteImg;
     private javax.swing.JLabel nescafeMochaImg;

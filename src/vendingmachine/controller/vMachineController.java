@@ -14,9 +14,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import vendingmachine.CurrencyID;
 import vendingmachine.Koneksi;
-import vendingmachine.mainFrame;
 import vendingmachine.models.minumanModel;
 import vendingmachine.models.vMachineModel;
+import vendingmachine.vMachineUI;
 
 /**
  *
@@ -27,14 +27,11 @@ public class vMachineController {
 	Koneksi koneksi = new Koneksi();
 	Connection con = koneksi.getKoneksi();
 	Statement stmt;
+	ResultSet rs;
 
 	vMachineModel model = new vMachineModel();
 
-	public vMachineModel getModel() {
-		return model;
-	}
-
-	public void changeSaldo(JLabel label, int saldo) {
+	public void setSaldo(JLabel label, int saldo) {
 		model.setSaldo(saldo);
 		label.setText(String.valueOf(new CurrencyID(model.getSaldo())));
 	}
@@ -60,16 +57,19 @@ public class vMachineController {
 	}
 
 	public void selectItem(JLabel labelSaldo, JLabel labelKode, JLabel labelOutput, JLabel getItemLabel) {
+
 		if (model.getKode().length() >= 1) {
+
 			String loopKode, loopNama, kode = model.getKode();
 			int loopHarga, loopStock;
-			for (int i = 0; i < model.getKodeMinuman().size(); i++) {
-				loopKode = model.getKodeMinuman().get(i).getKode();
-				loopHarga = model.getKodeMinuman().get(i).getHarga();
-				loopNama = model.getKodeMinuman().get(i).getNama();
-				loopStock = model.getKodeMinuman().get(i).getStock();
-				if (loopKode.equalsIgnoreCase(kode)) {
+			int i = 0;
 
+			for (minumanModel minuman : model.getKodeMinuman()) {
+				loopKode = minuman.getKode();
+				loopHarga = minuman.getHarga();
+				loopNama = minuman.getNama();
+				loopStock = minuman.getStock();
+				if (loopKode.equalsIgnoreCase(kode)) {
 					if (loopStock >= 1) {
 						if (model.getSaldo() >= loopHarga) {
 							model.setSaldo(-loopHarga);
@@ -77,14 +77,7 @@ public class vMachineController {
 							labelSaldo.setText(String.valueOf(new CurrencyID(model.getSaldo())));
 							labelKode.setText("");
 							getItemLabel.setVisible(true);
-
-							try {
-								BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + loopNama + ".png"));
-								BufferedImage rotate = rotateImg(original, -90.0d);
-								labelOutput.setIcon(new ImageIcon(rotate));
-							} catch (IOException ex) {
-								Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
-							}
+							rotate(labelOutput, loopNama);
 							insertTransaksi(loopKode);
 						} else {
 							JOptionPane.showMessageDialog(null, "Saldo Tidak Mencukupi.");
@@ -94,33 +87,35 @@ public class vMachineController {
 					}
 					break;
 				}
+
 				if (i == model.getKodeMinuman().size() - 1) {
 					JOptionPane.showMessageDialog(null, "Kode Minuman Tidak Tersedia.");
 				}
+				i++;
 			}
 		}
 	}
 
-	public void getOutputItem(JLabel getItemLabel, JLabel labelOutput) {
+	public void resetOutput(JLabel getItemLabel, JLabel labelOutput) {
 		getItemLabel.setVisible(false);
 		labelOutput.setIcon(null);
 	}
 
-	public void setBarang() {
-		ArrayList<minumanModel> minuman = new ArrayList();
+	public void loadBarang() {
+		ArrayList<minumanModel> listMinuman = new ArrayList();
 		int hargaDB, stockDB;
 		String kodeDB, namaDB;
 		String query = "SELECT * FROM barang";
 		try {
-			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery(query);
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(query);
 			while (rs.next()) {
 				kodeDB = rs.getString("kode");
 				namaDB = rs.getString("nama");
 				hargaDB = rs.getInt("harga");
 				stockDB = rs.getInt("stock");
-				minuman.add(new minumanModel(kodeDB, namaDB, hargaDB, stockDB));
-				model.setKodeMinuman(minuman);
+				listMinuman.add(new minumanModel(kodeDB, namaDB, hargaDB, stockDB));
+				model.setKodeMinuman(listMinuman);
 			}
 		} catch (SQLException ex) {
 			Logger.getLogger(vMachineModel.class.getName()).log(Level.SEVERE, null, ex);
@@ -128,11 +123,11 @@ public class vMachineController {
 	}
 
 	public void setStockBarang(JLabel... labelItem) {
-		setBarang();
+		loadBarang();
 		for (JLabel label : labelItem) {
-			for (int i = 0; i < model.getKodeMinuman().size(); i++) {
-				if (label.getName().equalsIgnoreCase(model.getKodeMinuman().get(i).getNama())) {
-					label.setText(String.valueOf(model.getKodeMinuman().get(i).getStock()));
+			for(minumanModel minuman : model.getKodeMinuman()) {
+				if (label.getName().equalsIgnoreCase(minuman.getNama())) {
+					label.setText(String.valueOf(minuman.getStock()));
 					break;
 				}
 			}
@@ -151,8 +146,18 @@ public class vMachineController {
 		}
 	}
 
+	private void rotate(JLabel label, String nama) {
+		try {
+			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + nama + ".png"));
+			BufferedImage rotate = rotateImg(original, -90.0d);
+			label.setIcon(new ImageIcon(rotate));
+		} catch (IOException ex) {
+			Logger.getLogger(vMachineUI.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+
 	//https://stackoverflow.com/questions/50883802/how-to-rotate-an-imageicon-in-java
-	public BufferedImage rotateImg(BufferedImage image, Double degrees) {
+	private BufferedImage rotateImg(BufferedImage image, Double degrees) {
 		// Calculate the new size of the image based on the angle of rotaion
 		double radians = Math.toRadians(degrees);
 		double sin = Math.abs(Math.sin(radians));
