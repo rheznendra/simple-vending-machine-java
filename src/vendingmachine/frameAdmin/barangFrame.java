@@ -9,8 +9,14 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumnModel;
+import vendingmachine.CurrencyID;
 import vendingmachine.controller.barangController;
+import vendingmachine.models.listBarangModel;
+import vendingmachine.models.minumanModel;
 
 /**
  *
@@ -22,6 +28,8 @@ public class barangFrame extends javax.swing.JInternalFrame {
 
 	JDesktopPane mainPanel;
 	JLabel breadCrumb;
+
+	DefaultTableModel tableModel;
 
 	public barangFrame(JDesktopPane mainPanel, JLabel breadCrumb) {
 		this.mainPanel = mainPanel;
@@ -79,18 +87,18 @@ public class barangFrame extends javax.swing.JInternalFrame {
         table.setForeground(new java.awt.Color(255, 255, 255));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "Coca-Cola",  new Integer(6)},
-                {"2", "Pepsi Strawberry",  new Integer(3)}
+                {"1", "A1", "Coca-Cola",  new Integer(6)},
+                {"2", "B2", "Fanta Strawberry",  new Integer(3)}
             },
             new String [] {
-                "No", "Barang", "Stock"
+                "No", "Kode", "Barang", "Stock"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, true, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -115,6 +123,7 @@ public class barangFrame extends javax.swing.JInternalFrame {
             table.getColumnModel().getColumn(0).setPreferredWidth(5);
             table.getColumnModel().getColumn(1).setResizable(false);
             table.getColumnModel().getColumn(2).setResizable(false);
+            table.getColumnModel().getColumn(3).setResizable(false);
         }
 
         getContentPane().add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 630, 360));
@@ -139,30 +148,31 @@ public class barangFrame extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-		controller.loadBarang(table, "all");
+		initTable();
+		setDataBarang();
     }//GEN-LAST:event_formInternalFrameOpened
 
     private void stockBarangItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_stockBarangItemStateChanged
 		if (evt.getStateChange() == ItemEvent.SELECTED) {
 			int index = stockBarang.getSelectedIndex();
 			if (index == 0) {
-				controller.loadBarang(table, "all");
+				controller.loadBarang("all");
 			} else if (index == 1) {
-				controller.loadBarang(table, "available");
+				controller.loadBarang("available");
 			} else if (index == 2) {
-				controller.loadBarang(table, "not available");
+				controller.loadBarang("not available");
 			}
+			setDataBarang();
 		}
     }//GEN-LAST:event_stockBarangItemStateChanged
 
     private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
 		int index = table.rowAtPoint(evt.getPoint());
-		int columnCount = table.getColumnCount();
 
 		if (evt.getClickCount() == 2) {
-			String nama = String.valueOf(table.getValueAt(index, 1));
+			String kode = String.valueOf(table.getValueAt(index, 1));
 			try {
-				barangDetailFrame barangDetail = new barangDetailFrame(mainPanel, breadCrumb, nama);
+				barangDetailFrame barangDetail = new barangDetailFrame(mainPanel, breadCrumb, kode);
 				this.dispose();
 				mainPanel.add(barangDetail);
 				barangDetail.setVisible(true);
@@ -173,6 +183,42 @@ public class barangFrame extends javax.swing.JInternalFrame {
 		}
     }//GEN-LAST:event_tableMouseClicked
 
+	private void setDataBarang() {
+		int i = 1;
+		tableModel.setRowCount(0);
+
+		listBarangModel model = controller.getModel();
+
+		for (minumanModel data : model.getListBarang()) {
+			Object[] row = {i + ".", data.getKode(), data.getNama(), new CurrencyID(data.getHarga()), data.getStock()};
+			tableModel.addRow(row);
+			i++;
+		}
+		table.setModel(tableModel);
+
+		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+		centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+
+		TableColumnModel colModel = table.getColumnModel();
+		colModel.getColumn(0).setPreferredWidth(50);
+		colModel.getColumn(0).setMaxWidth(50);
+		colModel.getColumn(0).setCellRenderer(centerRenderer);
+		colModel.getColumn(1).setCellRenderer(centerRenderer);
+		colModel.getColumn(2).setCellRenderer(centerRenderer);
+		colModel.getColumn(3).setCellRenderer(centerRenderer);
+		colModel.getColumn(4).setCellRenderer(centerRenderer);
+	}
+
+	private void initTable() {
+
+		String[] columsName = {"No", "Kode", "Barang", "Harga", "Stock"};
+		tableModel = new DefaultTableModel(columsName, 0) {
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				return false;
+			}
+		};
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lbFilter;

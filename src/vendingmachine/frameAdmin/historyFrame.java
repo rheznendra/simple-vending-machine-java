@@ -4,8 +4,13 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumnModel;
 import vendingmachine.controller.historyController;
+import vendingmachine.models.historyModel;
+import vendingmachine.models.listHistoryModel;
 
 /**
  *
@@ -14,7 +19,10 @@ import vendingmachine.controller.historyController;
 public class historyFrame extends javax.swing.JInternalFrame {
 
 	historyController controller = new historyController();
+	listHistoryModel model = controller.getModel();
 	JLabel breadCrumb;
+
+	DefaultTableModel tableModel;
 
 	public historyFrame(JLabel breadCrumb) {
 		this.breadCrumb = breadCrumb;
@@ -25,12 +33,12 @@ public class historyFrame extends javax.swing.JInternalFrame {
 
 		JTableHeader tableHeader = table.getTableHeader();
 		tableHeader.setOpaque(false);
-		tableHeader.setBackground(new Color(37,42,52));
+		tableHeader.setBackground(new Color(37, 42, 52));
 		tableHeader.setForeground(new Color(240, 240, 240));
 		tableHeader.setFont(new Font("Montserrat", 1, 14));
 
 		table.setFillsViewportHeight(true);
-		table.setBackground(new Color(37,42,52));
+		table.setBackground(new Color(37, 42, 52));
 		table.setShowGrid(true);
 		table.setShowVerticalLines(false);
 	}
@@ -108,9 +116,41 @@ public class historyFrame extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-        controller.loadHistory(table);
+		initTable();
+		setDataHistory();
     }//GEN-LAST:event_formInternalFrameOpened
 
+	private void setDataHistory() {
+		int i = 1;
+		tableModel.setRowCount(0);
+
+		for (historyModel data : model.getListHistory()) {
+			Object[] row = {i + ".", data.getNama(), data.getTanggal()};
+			tableModel.addRow(row);
+			i++;
+		}
+		table.setModel(tableModel);
+
+		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+		centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+
+		TableColumnModel colModel = table.getColumnModel();
+		colModel.getColumn(0).setPreferredWidth(50);
+		colModel.getColumn(0).setMaxWidth(50);
+		colModel.getColumn(0).setCellRenderer(centerRenderer);
+		colModel.getColumn(1).setCellRenderer(centerRenderer);
+		colModel.getColumn(2).setCellRenderer(centerRenderer);
+	}
+
+	private void initTable() {
+		String[] columsName = {"No", "Barang", "Tanggal"};
+		tableModel = new DefaultTableModel(columsName, 0) {
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				return false;
+			}
+		};
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane scrollPane;

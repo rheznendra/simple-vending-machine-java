@@ -3,13 +3,9 @@ package vendingmachine.controller;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import javax.swing.JSpinner;
-import javax.swing.JTextField;
-import org.apache.commons.text.WordUtils;
-import vendingmachine.CurrencyID;
 import vendingmachine.Koneksi;
 import vendingmachine.frameAdmin.barangDetailFrame;
+import vendingmachine.models.minumanModel;
 
 /**
  *
@@ -17,56 +13,53 @@ import vendingmachine.frameAdmin.barangDetailFrame;
  */
 public class barangDetailController {
 
-	String nama;
+	private minumanModel model;
+	private String kode;
 
-	Koneksi koneksi = new Koneksi();
-	Connection con = koneksi.getKoneksi();
+	private Koneksi koneksi = new Koneksi();
+	private Connection con = koneksi.getKoneksi();
 
-	Statement stmt;
-	ResultSet rs;
+	private Statement stmt;
+	private ResultSet rs;
 
-	public barangDetailController(String nama) {
-		this.nama = nama;
+	public barangDetailController(String kode) {
+		this.kode = kode;
+		loadData();
 	}
 
-	public void updateStock(JSpinner spStockNew, JTextField tfStockNow) {
-		int stockNew = (int) spStockNew.getValue();
+	public minumanModel getModel() {
+		return model;
+	}
 
-		int stockNow = Integer.parseInt(tfStockNow.getText());
+	public int updateStock(int stockNew) {
+		String query = "UPDATE barang SET stock = stock+%s WHERE kode = '%s'";
+		query = String.format(query, stockNew, kode);
 
-		if (stockNew >= 1) {
+		try {
+			stmt = con.createStatement();
+			stmt.executeUpdate(query);
 
-			if (stockNew + stockNow <= 10) {
-				String query = "UPDATE barang SET stock = stock+%s WHERE nama = '%s'";
-				query = String.format(query, stockNew, nama);
-
-				try {
-					stmt = con.createStatement();
-					stmt.executeUpdate(query);
-					JOptionPane.showMessageDialog(null, "Stock berhasil ditambahkan.");
-				} catch (SQLException ex) {
-					Logger.getLogger(barangDetailFrame.class.getName()).log(Level.SEVERE, null, ex);
-					JOptionPane.showMessageDialog(null, "Stock gagal ditambahkan.", null, JOptionPane.ERROR_MESSAGE);
-				}
-			} else {
-				JOptionPane.showMessageDialog(null, "Batas stock maksimal adalah 10.");
-			}
+			loadData();
+		} catch (SQLException ex) {
+			Logger.getLogger(barangDetailFrame.class.getName()).log(Level.SEVERE, null, ex);
 		}
+		return model.getStock();
 	}
 
-
-	public void loadData(JTextField tfNamaBarang, JTextField tfStockNow, JTextField tfPrice) {
-		String query = "SELECT * FROM barang WHERE nama = '%s'";
-		query = String.format(query, nama);
+	public void loadData() {
+		String query = "SELECT * FROM barang WHERE kode = '%s'";
+		query = String.format(query, kode);
 
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			if (rs.next()) {
-				String namaDB = WordUtils.capitalize(rs.getString("nama").replace("-", " "));
-				tfNamaBarang.setText(namaDB);
-				tfStockNow.setText(String.valueOf(rs.getInt("stock")));
-				tfPrice.setText(String.valueOf(new CurrencyID(rs.getInt("harga"))));
+				String kode = rs.getString("kode");
+				String nama = rs.getString("nama");
+				String slug = rs.getString("slug");
+				int harga = rs.getInt("harga");
+				int stock = rs.getInt("stock");
+				model = new minumanModel(kode, nama, slug, harga, stock);
 			}
 		} catch (SQLException ex) {
 			Logger.getLogger(barangDetailFrame.class.getName()).log(Level.SEVERE, null, ex);

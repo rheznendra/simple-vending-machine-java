@@ -69,11 +69,11 @@ public class vMachineController {
 			int loopHarga, loopStock;
 			int i = 0;
 
-			for (minumanModel minuman : model.getKodeMinuman()) {
-				loopKode = minuman.getKode();
-				loopHarga = minuman.getHarga();
-				loopNama = minuman.getNama();
-				loopStock = minuman.getStock();
+			for (minumanModel data : model.getKodeMinuman()) {
+				loopKode = data.getKode();
+				loopHarga = data.getHarga();
+				loopNama = data.getNama();
+				loopStock = data.getStock();
 
 				//Jika looping sesuai dengan input kode user
 				if (loopKode.equalsIgnoreCase(kode)) {
@@ -90,10 +90,10 @@ public class vMachineController {
 							model.setKode("");	//reset input kode di model
 							labelKode.setText("");	//reset label input kode
 
-							getItemLabel.setVisible(true); //tampilkan label "Ambil Disini"
-							showImageOutput(labelOutput, loopNama);	//tampilkan gambar di output
-
 							insertTransaksi(loopKode); //insert transaksi ke database
+
+							getItemLabel.setVisible(true); //tampilkan label "Ambil Disini"
+							showImageOutput(labelOutput, data.getSlug());	//tampilkan gambar di output
 						} else {
 							JOptionPane.showMessageDialog(null, "Saldo Tidak Mencukupi.");
 						}
@@ -119,7 +119,8 @@ public class vMachineController {
 	private void loadBarang() {
 		ArrayList<minumanModel> listMinuman = new ArrayList();
 		int hargaDB, stockDB;
-		String kodeDB, namaDB;
+		String kodeDB, namaDB, slugDB;
+
 		String query = "SELECT * FROM barang";
 		try {
 			stmt = con.createStatement();
@@ -127,9 +128,10 @@ public class vMachineController {
 			while (rs.next()) {
 				kodeDB = rs.getString("kode");
 				namaDB = rs.getString("nama");
+				slugDB = rs.getString("slug");
 				hargaDB = rs.getInt("harga");
 				stockDB = rs.getInt("stock");
-				listMinuman.add(new minumanModel(kodeDB, namaDB, hargaDB, stockDB));
+				listMinuman.add(new minumanModel(kodeDB, namaDB, slugDB, hargaDB, stockDB));
 				model.setKodeMinuman(listMinuman);
 			}
 		} catch (SQLException ex) {
@@ -143,7 +145,7 @@ public class vMachineController {
 		}
 		for (JLabel label : labelItem) {
 			for (minumanModel minuman : model.getKodeMinuman()) {
-				if (label.getName().equalsIgnoreCase(minuman.getNama())) {
+				if (label.getName().equalsIgnoreCase(minuman.getSlug())) {
 					label.setText(String.valueOf(minuman.getStock()));
 					break;
 				}
@@ -167,9 +169,9 @@ public class vMachineController {
 		return String.valueOf(new CurrencyID(model.getSaldo()));
 	}
 
-	private void showImageOutput(JLabel label, String nama) {
+	private void showImageOutput(JLabel label, String slug) {
 		try {
-			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + nama + ".png"));
+			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + slug + ".png"));
 			BufferedImage rotate = rotateImg(original, -90.0d);
 			label.setIcon(new ImageIcon(rotate));
 		} catch (IOException ex) {

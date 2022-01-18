@@ -1,15 +1,12 @@
 package vendingmachine.controller;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumnModel;
-import org.apache.commons.text.WordUtils;
 import vendingmachine.Koneksi;
+import vendingmachine.models.listBarangModel;
+import vendingmachine.models.minumanModel;
 
 /**
  *
@@ -17,54 +14,46 @@ import vendingmachine.Koneksi;
  */
 public class barangController {
 
-	Koneksi koneksi = new Koneksi();
-	Connection con = koneksi.getKoneksi();
+	private listBarangModel model;
 
-	Statement stmt;
-	ResultSet rs;
+	private Koneksi koneksi = new Koneksi();
+	private Connection con = koneksi.getKoneksi();
 
-	public void loadBarang(JTable table, String stock) {
+	private Statement stmt;
+	private ResultSet rs;
 
-		int i = 0;
-		DefaultTableModel tableModel;
+	public barangController() {
+		loadBarang("all");
+	}
+
+	public listBarangModel getModel() {
+		return model;
+	}
+
+	public void loadBarang(String filter) {
+
 		String query = "SELECT * FROM barang";
-		if(stock.equalsIgnoreCase("available")) {
+		if(filter.equalsIgnoreCase("available")) {
 			query = query + " WHERE stock >= 1";
-		} else if (stock.equalsIgnoreCase("not available")) {
+		} else if (filter.equalsIgnoreCase("not available")) {
 			query = query + " WHERE stock = 0";
 		}
-
-		String[] columsName = {"No", "Barang", "Stock"};
-		tableModel = new DefaultTableModel(columsName, 0) {
-			@Override
-			public boolean isCellEditable(int row, int column) {
-				return false;
-			}
-
-		};
+		ArrayList<minumanModel> listMinuman = new ArrayList();
 
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			while (rs.next()) {
-				i++;
-				Object[] data = {i + ".", WordUtils.capitalize(rs.getString("nama").replace("-", " ")), rs.getInt("stock")};
-				tableModel.addRow(data);
+				String kode = rs.getString("kode");
+				String nama = rs.getString("nama");
+				String slug = rs.getString("slug");
+				int harga = rs.getInt("harga");
+				int stock = rs.getInt("stock");
+				listMinuman.add(new minumanModel(kode, nama, slug, harga, stock));
 			}
+			model = new listBarangModel(listMinuman);
 		} catch (SQLException ex) {
 			Logger.getLogger(historyController.class.getName()).log(Level.SEVERE, null, ex);
 		}
-
-		table.setModel(tableModel);
-
-		DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-		centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-
-		TableColumnModel colModel = table.getColumnModel();
-		colModel.getColumn(0).setPreferredWidth(50);
-		colModel.getColumn(0).setMaxWidth(50);
-		colModel.getColumn(0).setCellRenderer(centerRenderer);
-		colModel.getColumn(1).setCellRenderer(centerRenderer);
-		colModel.getColumn(2).setCellRenderer(centerRenderer);
 	}
 }
