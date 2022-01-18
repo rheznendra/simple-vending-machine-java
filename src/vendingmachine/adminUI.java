@@ -192,7 +192,7 @@ public class adminUI extends javax.swing.JFrame {
 
     private void panelSidebarItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelSidebarItem2MouseClicked
 		try {
-			barangFrame barang = new barangFrame(breadCrumb);
+			barangFrame barang = new barangFrame(desktopPane, breadCrumb);
 			desktopPane.add(barang);
 			barang.setMaximum(true);
 			barang.setVisible(true);
@@ -228,12 +228,13 @@ public class adminUI extends javax.swing.JFrame {
 	}
 
 	public static void main(String args[]) {
+
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
 //				if (model.getUsername() == null) {
 //					new loginUI(model).setVisible(true);
 //				} else {
-					new adminUI().setVisible(true);
+				new adminUI().setVisible(true);
 //				}
 			}
 		});

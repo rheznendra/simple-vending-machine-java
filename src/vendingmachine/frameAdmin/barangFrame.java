@@ -3,7 +3,11 @@ package vendingmachine.frameAdmin;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ItemEvent;
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
 import javax.swing.table.JTableHeader;
 import vendingmachine.controller.barangController;
@@ -15,11 +19,14 @@ import vendingmachine.controller.barangController;
 public class barangFrame extends javax.swing.JInternalFrame {
 
 	barangController controller = new barangController();
+
+	JDesktopPane mainPanel;
 	JLabel breadCrumb;
 
-	public barangFrame(JLabel breadCrumb) {
+	public barangFrame(JDesktopPane mainPanel, JLabel breadCrumb) {
+		this.mainPanel = mainPanel;
 		this.breadCrumb = breadCrumb;
-		this.breadCrumb.setText("History");
+		this.breadCrumb.setText("Barang");
 		this.breadCrumb.setIcon(new ImageIcon(getClass().getResource("/vendingmachine/icon/vending_machine_black.png")));
 		initComponents();
 		((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
@@ -43,7 +50,7 @@ public class barangFrame extends javax.swing.JInternalFrame {
         scrollPane = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         stockBarang = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
+        lbFilter = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(234, 234, 234));
         setBorder(null);
@@ -97,6 +104,11 @@ public class barangFrame extends javax.swing.JInternalFrame {
         table.setGridColor(new java.awt.Color(255, 255, 255));
         table.setRowHeight(35);
         table.setShowGrid(false);
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
+            }
+        });
         scrollPane.setViewportView(table);
         if (table.getColumnModel().getColumnCount() > 0) {
             table.getColumnModel().getColumn(0).setResizable(false);
@@ -118,10 +130,10 @@ public class barangFrame extends javax.swing.JInternalFrame {
         });
         getContentPane().add(stockBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 130, 30));
 
-        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(37, 42, 52));
-        jLabel1.setText("Stock");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 26, -1, -1));
+        lbFilter.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        lbFilter.setForeground(new java.awt.Color(37, 42, 52));
+        lbFilter.setText("Stock");
+        getContentPane().add(lbFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 26, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,9 +155,27 @@ public class barangFrame extends javax.swing.JInternalFrame {
 		}
     }//GEN-LAST:event_stockBarangItemStateChanged
 
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+		int index = table.rowAtPoint(evt.getPoint());
+		int columnCount = table.getColumnCount();
+
+		if (evt.getClickCount() == 2) {
+			String nama = String.valueOf(table.getValueAt(index, 1));
+			try {
+				barangDetailFrame barangDetail = new barangDetailFrame(mainPanel, breadCrumb, nama);
+				this.dispose();
+				mainPanel.add(barangDetail);
+				barangDetail.setVisible(true);
+				barangDetail.setMaximum(true);
+			} catch (PropertyVetoException ex) {
+				Logger.getLogger(barangFrame.class.getName()).log(Level.SEVERE, null, ex);
+			}
+		}
+    }//GEN-LAST:event_tableMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lbFilter;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JComboBox<String> stockBarang;
     private javax.swing.JTable table;
