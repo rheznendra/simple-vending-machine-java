@@ -1,7 +1,11 @@
 package vendingmachine;
 
-import javax.swing.JOptionPane;
-import org.apache.commons.lang3.ArrayUtils;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import vendingmachine.controller.vMachineController;
 
 /**
@@ -12,8 +16,7 @@ public class vMachineUI extends javax.swing.JFrame {
 
 	vMachineController controller;
 
-	int saldo, inputNominal = 0;
-	int[] nominal = new int[]{2000, 5000, 10000};
+	int saldo;
 	boolean anyError;
 
 	public vMachineUI() {
@@ -1404,75 +1407,66 @@ public class vMachineUI extends javax.swing.JFrame {
 
 
     private void panelEnterMoneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEnterMoneyMouseClicked
-		anyError = false;
-
-		//Dialog masukkan nominal
-		String dialog = JOptionPane.showInputDialog(this, "Masukkan Nominal", "Vending Machine", JOptionPane.INFORMATION_MESSAGE);
-
-		//Check Input Kosong
-		if (dialog == null || dialog.isBlank()) {
-			anyError = true;
-		}
-
-		//Check Input Hanya Boleh Angka
-		if (!anyError && !dialog.matches("^[0-9]*$")) {
-			anyError = true;
-			JOptionPane.showMessageDialog(this, "Nominal Tidak Valid.", "Terjadi Kesalahan!", JOptionPane.ERROR_MESSAGE);
-		}
-
-		//Check Nominal Uang
-		if (!anyError) {
-			inputNominal = Integer.parseInt(dialog);
-			if (!ArrayUtils.contains(nominal, inputNominal)) {
-				anyError = true;
-				JOptionPane.showMessageDialog(this, "Hanya Menerima Uang Nominal Rp. 2000, Rp. 5000, Rp. 10.000");
-			}
-		}
-
-		if (!anyError) {
-			controller.setSaldo(labelCurrentSaldo, inputNominal);
-		}
+		controller.enterMoney();
+		labelCurrentSaldo.setText(controller.currentSaldo());
     }//GEN-LAST:event_panelEnterMoneyMouseClicked
 
     private void bt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt4ActionPerformed
-		controller.typingKode(itemLabel, "4");
+		itemLabel.setText(controller.typingKode("4"));
     }//GEN-LAST:event_bt4ActionPerformed
 
     private void btBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBActionPerformed
-		controller.typingKode(itemLabel, "B");
+		itemLabel.setText(controller.typingKode("B"));
     }//GEN-LAST:event_btBActionPerformed
 
     private void bt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt2ActionPerformed
-		controller.typingKode(itemLabel, "2");
+		itemLabel.setText(controller.typingKode("2"));
     }//GEN-LAST:event_bt2ActionPerformed
 
     private void bt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt3ActionPerformed
-		controller.typingKode(itemLabel, "3");
+		itemLabel.setText(controller.typingKode("3"));
     }//GEN-LAST:event_bt3ActionPerformed
 
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
-		controller.selectItem(labelCurrentSaldo, itemLabel, labelOutput, getItemLabel);
-		getStockBarang(true);
+		//Jika Tidak Ada Error
+		if (controller.selectItem()) {
+			itemLabel.setText("");	//reset label input kode
+			getItemLabel.setVisible(true); //tampilkan label "Ambil Disini"
+			showImageOutput(controller.getSlug()); //tampilkan gambar di output
+			labelCurrentSaldo.setText(controller.currentSaldo()); //refresh saldo user
+			getStockBarang(true);
+		}
     }//GEN-LAST:event_btEnterActionPerformed
 
+	public void showImageOutput(String slug) {
+		try {
+			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + slug + ".png"));
+			BufferedImage rotate = controller.rotateImg(original, -90.0d);
+			labelOutput.setIcon(new ImageIcon(rotate));
+		} catch (IOException ex) {
+			Logger.getLogger(vMachineUI.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+
     private void btDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDeleteActionPerformed
-		controller.deleteKode(itemLabel);
+		itemLabel.setText(controller.deleteKode());
     }//GEN-LAST:event_btDeleteActionPerformed
 
     private void btAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAActionPerformed
-		controller.typingKode(itemLabel, "A");
+		itemLabel.setText(controller.typingKode("A"));
     }//GEN-LAST:event_btAActionPerformed
 
     private void bt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt1ActionPerformed
-		controller.typingKode(itemLabel, "1");
+		itemLabel.setText(controller.typingKode("1"));
     }//GEN-LAST:event_bt1ActionPerformed
 
     private void btCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCActionPerformed
-		controller.typingKode(itemLabel, "C");
+		itemLabel.setText(controller.typingKode("C"));
     }//GEN-LAST:event_btCActionPerformed
 
     private void panelOutputMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelOutputMouseClicked
-		controller.resetOutput(getItemLabel, labelOutput);
+		getItemLabel.setVisible(false);
+		labelOutput.setIcon(null);
     }//GEN-LAST:event_panelOutputMouseClicked
 
 	private void getStockBarang(boolean refreshBarang) {

@@ -3,20 +3,17 @@ package vendingmachine.controller;
 import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import org.apache.commons.lang3.ArrayUtils;
 import vendingmachine.CurrencyID;
 import vendingmachine.Koneksi;
 import vendingmachine.models.minumanModel;
 import vendingmachine.models.vMachineModel;
-import vendingmachine.vMachineUI;
 
 /**
  *
@@ -24,96 +21,161 @@ import vendingmachine.vMachineUI;
  */
 public class vMachineController {
 
-	Koneksi koneksi = new Koneksi();
-	Connection con = koneksi.getKoneksi();
-	Statement stmt;
-	ResultSet rs;
+	private Koneksi koneksi = new Koneksi();
+	private Connection con = koneksi.getKoneksi();
+	private Statement stmt;
+	private ResultSet rs;
 
-	vMachineModel model = new vMachineModel();
+	public vMachineModel model = new vMachineModel();
+
+	private boolean anyError;
+	private String slug;
 
 	public vMachineController() {
 		loadBarang();
 	}
 
-	public void setSaldo(JLabel label, int saldo) {
-		model.setSaldo(saldo);
-		label.setText(currentSaldo());
+	public vMachineModel getModel() {
+		return model;
 	}
 
-	public void typingKode(JLabel label, String text) {
+	public void setSaldo(int saldo) {
+		model.setSaldo(saldo);
+	}
+
+	public String getSlug() {
+		return slug;
+	}
+
+	public void setSlug(String slug) {
+		this.slug = slug;
+	}
+
+	public String typingKode(String text) {
 		if (model.getSaldo() >= 1) {
 			String kode = model.getKode();
 			if (kode.length() < 2) {
 				kode = kode + text;
 				model.setKode(kode);
-				label.setText(kode);
 			}
+			return model.getKode();
 		}
+		return null;
 	}
 
-	public void deleteKode(JLabel label) {
+	public String deleteKode() {
 		String kode = model.getKode();
 		if (kode.length() >= 1) {
 			kode = kode.substring(0, kode.length() - 1);
 			model.setKode(kode);
-			label.setText(kode);
+			return model.getKode();
 		}
+		return null;
 	}
 
-	public void selectItem(JLabel labelSaldo, JLabel labelKode, JLabel labelOutput, JLabel getItemLabel) {
-
-		//Cek jika input kode adalah 2 huruf
-		if (model.getKode().length() == 2) {
-
-			String loopKode, loopNama, kode = model.getKode();
-			int loopHarga, loopStock;
-			int i = 0;
-
-			for (minumanModel data : model.getKodeMinuman()) {
-				loopKode = data.getKode();
-				loopHarga = data.getHarga();
-				loopNama = data.getNama();
-				loopStock = data.getStock();
-
-				//Jika looping sesuai dengan input kode user
-				if (loopKode.equalsIgnoreCase(kode)) {
-
-					//Jika stock lebih dari sama dengan 1
-					if (loopStock >= 1) {
-
-						//Jika saldo user mencukupi
-						if (model.getSaldo() >= loopHarga) {
-
-							model.setSaldo(-loopHarga); //kurangi saldo user
-							labelSaldo.setText(currentSaldo());
-
-							model.setKode("");	//reset input kode di model
-							labelKode.setText("");	//reset label input kode
-
-							insertTransaksi(loopKode); //insert transaksi ke database
-
-							getItemLabel.setVisible(true); //tampilkan label "Ambil Disini"
-							showImageOutput(labelOutput, data.getSlug());	//tampilkan gambar di output
-						} else {
-							JOptionPane.showMessageDialog(null, "Saldo Tidak Mencukupi.");
-						}
-					} else {
-						JOptionPane.showMessageDialog(null, "Stock Habis.");
-					}
-					break;
-				}
-
-				if (i == model.getKodeMinuman().size() - 1) {
-					JOptionPane.showMessageDialog(null, "Kode Minuman Tidak Tersedia.");
-				}
-				i++;
+	public boolean checkMinumanExists() {
+		String kode = model.getKode();
+		for (minumanModel data : model.getKodeMinuman()) {
+			if (data.getKode().equalsIgnoreCase(kode)) {
+				return true;
 			}
 		}
+		return false;
 	}
 
-	public void resetOutput(JLabel getItemLabel, JLabel labelOutput) {
-		getItemLabel.setVisible(false);
-		labelOutput.setIcon(null);
+	public boolean checkStockExists() {
+		String kode = model.getKode();
+		for (minumanModel data : model.getKodeMinuman()) {
+			if (data.getStock() >= 1) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean checkSaldoValid() {
+		String kode = model.getKode();
+		for (minumanModel data : model.getKodeMinuman()) {
+			if (model.getSaldo() >= data.getHarga()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean selectItem() {
+		anyError = false;
+
+		//Check Panjang Kode Input User = 2
+		if (model.getKode().length() >= 2) {
+
+			//Check Kode Minuman
+			if (!anyError && !checkMinumanExists()) {
+				anyError = true;
+				JOptionPane.showMessageDialog(null, "Kode Minuman Tidak Tersedia.");
+			}
+
+			//Check Ketersediaan Stock
+			if (!anyError && !checkStockExists()) {
+				anyError = true;
+				JOptionPane.showMessageDialog(null, "Stock Habis.");
+			}
+
+			//Check Saldo Mencukupi atau Tidak
+			if (!anyError && !checkSaldoValid()) {
+				anyError = true;
+				JOptionPane.showMessageDialog(null, "Saldo Tidak Mencukupi.");
+			}
+
+			//Jika Tidak Ada Error
+			if (!anyError) {
+				int harga = 0;
+				for (minumanModel data : model.getKodeMinuman()) {
+					if (data.getKode().equalsIgnoreCase(model.getKode())) {
+						harga = data.getHarga();
+						setSlug(data.getSlug());
+						break;
+					}
+				}
+				model.setSaldo(-harga); //kurangi saldo user
+				insertTransaksi(); //insert transaksi ke database
+				model.setKode("");	//reset input kode di model
+			}
+		}
+		return !anyError;
+	}
+
+	public void enterMoney() {
+		anyError = false;
+		int inputNominal = 0;
+		int[] nominal = new int[]{2000, 5000, 10000}; //allowed nominal
+
+		//Dialog masukkan nominal
+		String dialog = JOptionPane.showInputDialog(null, "Masukkan Nominal", "Vending Machine", JOptionPane.INFORMATION_MESSAGE);
+
+		//Check Input Kosong
+		if (dialog == null || dialog.isBlank()) {
+			anyError = true;
+		}
+
+		//Check Input Hanya Boleh Angka
+		if (!anyError && !dialog.matches("^[0-9]*$")) {
+			anyError = true;
+			JOptionPane.showMessageDialog(null, "Nominal Tidak Valid.", "Terjadi Kesalahan!", JOptionPane.ERROR_MESSAGE);
+		}
+
+		//Check Nominal Uang
+		if (!anyError) {
+			inputNominal = Integer.parseInt(dialog);
+			if (!ArrayUtils.contains(nominal, inputNominal)) {
+				anyError = true;
+				JOptionPane.showMessageDialog(null, "Hanya Menerima Uang Nominal Rp. 2000, Rp. 5000, Rp. 10.000");
+			}
+		}
+
+		if (!anyError) {
+			setSaldo(inputNominal);
+		}
 	}
 
 	private void loadBarang() {
@@ -153,10 +215,10 @@ public class vMachineController {
 		}
 	}
 
-	private void insertTransaksi(String kode) {
+	private void insertTransaksi() {
 		try {
 			String query = "INSERT INTO TRANSAKSI (kode_barang) VALUES ('%s')";
-			query = String.format(query, kode);
+			query = String.format(query, model.getKode());
 
 			stmt = con.createStatement();
 			stmt.execute(query);
@@ -165,22 +227,12 @@ public class vMachineController {
 		}
 	}
 
-	private String currentSaldo() {
+	public String currentSaldo() {
 		return String.valueOf(new CurrencyID(model.getSaldo()));
 	}
 
-	private void showImageOutput(JLabel label, String slug) {
-		try {
-			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + slug + ".png"));
-			BufferedImage rotate = rotateImg(original, -90.0d);
-			label.setIcon(new ImageIcon(rotate));
-		} catch (IOException ex) {
-			Logger.getLogger(vMachineUI.class.getName()).log(Level.SEVERE, null, ex);
-		}
-	}
-
 	//https://stackoverflow.com/questions/50883802/how-to-rotate-an-imageicon-in-java
-	private BufferedImage rotateImg(BufferedImage image, Double degrees) {
+	public BufferedImage rotateImg(BufferedImage image, Double degrees) {
 		// Calculate the new size of the image based on the angle of rotaion
 		double radians = Math.toRadians(degrees);
 		double sin = Math.abs(Math.sin(radians));
