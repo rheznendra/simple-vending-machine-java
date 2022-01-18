@@ -9,12 +9,12 @@ import vendingmachine.models.adminModel;
  */
 public class loginUI extends javax.swing.JFrame {
 
-	loginController controller;
-	adminModel model;
+	private loginController controller;
+	public adminModel model;
 
 	public loginUI(adminModel model) {
-		controller = new loginController();
 		this.model = model;
+		controller = new loginController(model);
 		initComponents();
 	}
 
@@ -70,8 +70,11 @@ public class loginUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSubmitActionPerformed
-		if (controller.checkLogin(inputUsername, inputPassword, model)) {
-			System.out.println(123);
+
+		String username = inputUsername.getText();
+		String password = new String(inputPassword.getPassword());
+
+		if (controller.checkLogin(username, password)) {
 			this.dispose();
 			new adminUI().setVisible(true);
 		}

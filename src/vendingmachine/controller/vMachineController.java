@@ -35,10 +35,6 @@ public class vMachineController {
 		loadBarang();
 	}
 
-	public vMachineModel getModel() {
-		return model;
-	}
-
 	public void setSaldo(int saldo) {
 		model.setSaldo(saldo);
 	}
@@ -47,7 +43,7 @@ public class vMachineController {
 		return slug;
 	}
 
-	public void setSlug(String slug) {
+	private void setSlug(String slug) {
 		this.slug = slug;
 	}
 
@@ -73,7 +69,7 @@ public class vMachineController {
 		return null;
 	}
 
-	public boolean checkMinumanExists() {
+	private boolean checkMinumanExists() {
 		String kode = model.getKode();
 		for (minumanModel data : model.getKodeMinuman()) {
 			if (data.getKode().equalsIgnoreCase(kode)) {
@@ -83,8 +79,7 @@ public class vMachineController {
 		return false;
 	}
 
-	public boolean checkStockExists() {
-		String kode = model.getKode();
+	private boolean checkStockExists() {
 		for (minumanModel data : model.getKodeMinuman()) {
 			if (data.getStock() >= 1) {
 				return true;
@@ -93,8 +88,7 @@ public class vMachineController {
 		return false;
 	}
 
-	public boolean checkSaldoValid() {
-		String kode = model.getKode();
+	private boolean checkSaldoValid() {
 		for (minumanModel data : model.getKodeMinuman()) {
 			if (model.getSaldo() >= data.getHarga()) {
 				return true;
@@ -108,6 +102,7 @@ public class vMachineController {
 
 		//Check Panjang Kode Input User = 2
 		if (model.getKode().length() >= 2) {
+			System.out.println(model.getKode());
 
 			//Check Kode Minuman
 			if (!anyError && !checkMinumanExists()) {
@@ -141,6 +136,8 @@ public class vMachineController {
 				insertTransaksi(); //insert transaksi ke database
 				model.setKode("");	//reset input kode di model
 			}
+		} else {
+			anyError = true;
 		}
 		return !anyError;
 	}

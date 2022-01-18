@@ -12,11 +12,11 @@ public class barangDetailControllerTest {
 	@Test
 	public void testUpdateStock() {
 		int stockNew = 2;
-		String kode = "B1";
+		String kode = "A1";
 
 		barangDetailController instance = new barangDetailController(kode);
 
-		int expResult = 10;
+		int expResult = 9;
 		int result = instance.updateStock(stockNew);
 		assertEquals(expResult, result);
 	}

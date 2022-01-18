@@ -14,10 +14,7 @@ import vendingmachine.controller.vMachineController;
  */
 public class vMachineUI extends javax.swing.JFrame {
 
-	vMachineController controller;
-
-	int saldo;
-	boolean anyError;
+	private vMachineController controller;
 
 	public vMachineUI() {
 		controller = new vMachineController();
@@ -222,7 +219,7 @@ public class vMachineUI extends javax.swing.JFrame {
         stockCocaCola.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
         stockCocaCola.setForeground(new java.awt.Color(234, 234, 234));
         stockCocaCola.setText("0");
-        stockCocaCola.setName("coca-cola-zero"); // NOI18N
+        stockCocaCola.setName("coca-cola"); // NOI18N
 
         javax.swing.GroupLayout panelStockCocaColaLayout = new javax.swing.GroupLayout(panelStockCocaCola);
         panelStockCocaCola.setLayout(panelStockCocaColaLayout);
@@ -1438,7 +1435,7 @@ public class vMachineUI extends javax.swing.JFrame {
 		}
     }//GEN-LAST:event_btEnterActionPerformed
 
-	public void showImageOutput(String slug) {
+	private void showImageOutput(String slug) {
 		try {
 			BufferedImage original = ImageIO.read(getClass().getResource("/vendingmachine/images/" + slug + ".png"));
 			BufferedImage rotate = controller.rotateImg(original, -90.0d);

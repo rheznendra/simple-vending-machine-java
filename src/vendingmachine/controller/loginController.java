@@ -5,8 +5,6 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 import vendingmachine.Koneksi;
 import vendingmachine.models.adminModel;
 
@@ -16,18 +14,22 @@ import vendingmachine.models.adminModel;
  */
 public class loginController {
 
-	Koneksi koneksi = new Koneksi();
-	Connection con = koneksi.getKoneksi();
+	private Koneksi koneksi = new Koneksi();
+	private Connection con = koneksi.getKoneksi();
 
-	Statement stmt;
-	ResultSet rs;
+	private Statement stmt;
+	private ResultSet rs;
 
 	boolean anyError;
 
-	public boolean checkLogin(JTextField inputUsername, JPasswordField inputPassword, adminModel model) {
+	adminModel model;
+
+	public loginController(adminModel model) {
+		this.model = model;
+	}
+
+	public boolean checkLogin(String username, String password) {
 		anyError = false;
-		String username = inputUsername.getText();
-		String password = new String(inputPassword.getPassword());
 
 		if (username.isBlank()) {
 			anyError = true;
