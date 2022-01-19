@@ -231,11 +231,11 @@ public class adminUI extends javax.swing.JFrame {
 
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
-//				if (model.getUsername() == null) {
-//					new loginUI(model).setVisible(true);
-//				} else {
-				new adminUI().setVisible(true);
-//				}
+				if (model.getUsername() == null) {
+					new loginUI(model).setVisible(true);
+				} else {
+					new adminUI().setVisible(true);
+				}
 			}
 		});
 	}
